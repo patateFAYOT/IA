@@ -8,6 +8,7 @@
 #include "MessageDispatcher.h"
 #include "misc/ConsoleUtils.h"
 #include "EntityNames.h"
+#include <thread>
 
 
 std::ofstream os;
@@ -32,17 +33,59 @@ int main()
   EntityMgr->RegisterEntity(Bob);
   EntityMgr->RegisterEntity(Elsa);
 
+  auto f_bob = [](Miner* Bob) {
+      for (int i = 0; i < 30; ++i) {
+          Bob->Update();
+          Sleep(800);
+      }
+  };
+
+  auto f_elsa = [](MinersWife* Elsa) {
+      for (int i = 0; i < 30; ++i) {
+          Elsa->Update();
+          Sleep(800);
+      }
+  };
+
+  auto f_message = []() {
+      for (int i = 0; i < 30; ++i) {
+          Dispatch->DispatchDelayedMessages();
+          Sleep(800);
+      }
+  };
+
+  std::thread t_bob(f_bob, Bob);
+
+  Sleep(100);
+
+  std::thread t_elsa(f_elsa, Elsa);
+
+  Sleep(100);
+
+  std::thread t_message(f_message);
+
   //run Bob and Elsa through a few Update calls
-  for (int i=0; i<30; ++i)
-  { 
-    Bob->Update();
-    Elsa->Update();
+  //for (int i=0; i<30; ++i)
+  //{ 
+  //  
 
-    //dispatch any delayed messages
-    Dispatch->DispatchDelayedMessages();
+  //  
 
-    Sleep(800);
-  }
+  //  
+  //  Bob->Update();
+  //  Elsa->Update();
+
+  //  
+
+  //  //dispatch any delayed messages
+  //  Dispatch->DispatchDelayedMessages();
+
+  //  Sleep(800);
+  //}
+
+  t_bob.join();
+  t_elsa.join();
+  t_message.join();
 
   //tidy up
   delete Bob;
