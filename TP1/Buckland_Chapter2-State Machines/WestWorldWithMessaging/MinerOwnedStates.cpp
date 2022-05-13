@@ -262,7 +262,7 @@ bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
         SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
 
         cout << "\n" << GetNameOfEntity(pMiner->ID())
-            << ": Freakin' drunkard!";
+            << ": Ah don' wanna talk to you no more, you empty-headed animal food-trough wiper! Ah fart in your general direction!Your mother was a hamster, and your father smelt of elderberries!";
 
         Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
             pMiner->ID(),        //ID of sender
