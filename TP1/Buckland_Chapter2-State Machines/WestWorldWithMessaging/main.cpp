@@ -9,7 +9,7 @@
 #include "MessageDispatcher.h"
 #include "misc/ConsoleUtils.h"
 #include "EntityNames.h"
-
+#include <thread>
 
 std::ofstream os;
 
@@ -37,18 +37,66 @@ int main()
   EntityMgr->RegisterEntity(Elsa);
   EntityMgr->RegisterEntity(Drunkard);
 
+  //threads
+  auto FunctionBob = [](Miner* Bob)
+  {
+      for (int i = 0; i < 30; ++i) {
+          Bob->Update();
+          Sleep(800);
+      }
+  };
+
+  auto FunctionElsa = [](MinersWife* Elsa)
+  {
+      for (int i = 0; i < 30; ++i) {
+          Elsa->Update();
+          Sleep(800);
+      }
+  };
+
+  auto FunctionDrunkard = [](Drunk* Drunkard)
+  {
+      for (int i = 0; i < 30; ++i) {
+          Drunkard->Update();
+          Sleep(800);
+      }
+  };
+
+  auto FunctionMessage = []()
+  {
+      for (int i = 0; i < 30; ++i) {
+          Dispatch->DispatchDelayedMessages();
+          Sleep(800);
+      }
+  };
+
+  std::thread ThreadDrunkard(FunctionDrunkard, Drunkard);
+  Sleep(100);
+  std::thread ThreadBob(FunctionBob, Bob);
+  Sleep(100);
+  std::thread ThreadElsa(FunctionElsa, Elsa);
+  Sleep(100);
+  std::thread ThreadMessage(FunctionMessage);
+
+  ThreadDrunkard.join();
+  ThreadBob.join();
+  ThreadElsa.join();
+  ThreadMessage.join();
+
   //run Bob and Elsa through a few Update calls
+  /*
   for (int i=0; i<30; ++i)
-  { 
+  {
+    Drunkard->Update();
     Bob->Update();
     Elsa->Update();
-    Drunkard->Update();
 
     //dispatch any delayed messages
     Dispatch->DispatchDelayedMessages();
 
     Sleep(800);
   }
+  */
 
   //tidy up
   delete Bob;
