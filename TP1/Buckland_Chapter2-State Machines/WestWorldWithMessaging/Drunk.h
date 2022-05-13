@@ -38,9 +38,7 @@ private:
 
 public:
 
-    Drunk(int id):m_iDrunkness(0),
-        BaseGameEntity(id)
-
+    Drunk(int id):m_iDrunkness(0),BaseGameEntity(id)
     {
         //set up state machine
         m_pStateMachine = new StateMachine<Drunk>(this);

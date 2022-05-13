@@ -48,7 +48,7 @@ void DrunkAndQuarrel::Execute(Drunk* pDrunk)
             Msg_WannaFight,      //the message
             NO_ADDITIONAL_INFO);
 
-        cout << "\n" << GetNameOfEntity(pDrunk->ID()) << ": " << "You're wife's a freakin' ice queen!";
+        cout << "\n" << GetNameOfEntity(pDrunk->ID()) << ": " << "Your wife's a freakin' ice queen!";
     }
 }
 

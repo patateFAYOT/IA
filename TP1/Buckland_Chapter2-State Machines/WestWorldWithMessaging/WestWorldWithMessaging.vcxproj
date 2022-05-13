@@ -154,6 +154,7 @@
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EntityNames.h" />
     <ClInclude Include="Locations.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="MessageDispatcher.h" />
     <ClInclude Include="MessageTypes.h" />
     <ClInclude Include="Miner.h" />
