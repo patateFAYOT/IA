@@ -65,6 +65,7 @@ public:
 
     bool          isDrunk()const;
     void          Drink() { m_iDrunkness += 2; }
+    void          Calming() { m_iDrunkness -= 1; }
 
 };
 

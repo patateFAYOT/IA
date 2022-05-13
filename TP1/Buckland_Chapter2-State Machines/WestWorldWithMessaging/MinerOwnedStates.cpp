@@ -40,7 +40,6 @@ void EnterMineAndDigForNugget::Enter(Miner* pMiner)
   }
 }
 
-
 void EnterMineAndDigForNugget::Execute(Miner* pMiner)
 {  
   //Now the miner is at the goldmine he digs for gold until he
@@ -251,7 +250,30 @@ void QuenchThirst::Exit(Miner* pMiner)
 
 bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
 {
-  //send msg to global message handler
+    SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+    switch (msg.Msg)
+    {
+    case Msg_WannaFight:
+
+        cout << "\nMessage handled by " << GetNameOfEntity(pMiner->ID())
+            << " at time: " << Clock->GetCurrentTime();
+
+        SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
+
+        cout << "\n" << GetNameOfEntity(pMiner->ID())
+            << ": Freakin' drunkard!";
+
+        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+            pMiner->ID(),        //ID of sender
+            ent_Drunkard,            //ID of recipient
+            Msg_Fighting,   //the message
+            NO_ADDITIONAL_INFO);
+
+        return true;
+
+    }//end switch
+
   return false;
 }
 
