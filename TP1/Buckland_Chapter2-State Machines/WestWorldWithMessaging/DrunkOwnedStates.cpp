@@ -64,3 +64,42 @@ void HangoverRecovery::Exit(Drunk* pDrunker)
 }
 
 
+GoingToSaloon* GoingToSaloon::Instance()
+{
+    static GoingToSaloon instance;
+
+    return &instance;
+}
+
+void GoingToSaloon::Enter(Drunk* pDrunker)
+{
+    //if the miner is not already located at the goldmine, he must
+    //change location to the gold mine
+    if (pDrunker->Location() != saloon)
+    {
+        pDrunker->ChangeLocation(saloon);
+    }
+    cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+        << "Hey barman, the same as always !";
+}
+
+void GoingToSaloon::Execute(Drunk* pDrunker)
+{
+
+    if (!pDrunker->isDrunk())
+    {
+        pDrunker->GetDrunk();
+        cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": " << "That's some good whiskey ";
+    }
+    else
+    {
+        pDrunker->GetFSM()->ChangeState(HangoverRecovery::Instance());
+    }
+
+}
+
+void GoingToSaloon::Exit(Drunk* pDrunker)
+{
+    cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+        << "goin' to sleep";
+}
