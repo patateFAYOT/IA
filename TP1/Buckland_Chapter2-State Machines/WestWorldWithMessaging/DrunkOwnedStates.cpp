@@ -86,14 +86,14 @@ void GoingToSaloon::Enter(Drunk* pDrunker)
 void GoingToSaloon::Execute(Drunk* pDrunker)
 {
 
-    if (!pDrunker->isDrunk())
+    if (!pDrunker->WannaFight())
     {
         pDrunker->GetDrunk();
         cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": " << "That's some good whiskey ";
     }
     else
     {
-        pDrunker->GetFSM()->ChangeState(HangoverRecovery::Instance());
+        pDrunker->GetFSM()->ChangeState(DrinkAndFight::Instance());
     }
 
 }
@@ -101,5 +101,5 @@ void GoingToSaloon::Execute(Drunk* pDrunker)
 void GoingToSaloon::Exit(Drunk* pDrunker)
 {
     cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
-        << "goin' to sleep";
+        << "gonna clap some chicks";
 }

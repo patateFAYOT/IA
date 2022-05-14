@@ -24,7 +24,8 @@ struct Telegram;
 
 // the maximum level of drunkness
 const int max_drunkness = 5;
-
+// at this level, roger wants to fight
+const int fight_drunkness = 2;
 
 
 class Drunk : public BaseGameEntity
@@ -73,8 +74,10 @@ public:
 
     bool          isSober() {}
     bool          isDrunk() {}
+    bool          WannaFight() {}
     void          GetDrunk() { m_Drunkness++; }
     void          Sleeping() { m_Drunkness--; }
+
 };
 
 

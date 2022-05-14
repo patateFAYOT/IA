@@ -24,3 +24,9 @@ bool Drunk::isSober()
     if (m_Drunkness == 0) return true; 
     else return false;
 }
+
+bool Drunk::WannaFight()
+{
+    if (m_Drunkness >= fight_drunkness) return true;
+    else return false;
+}
