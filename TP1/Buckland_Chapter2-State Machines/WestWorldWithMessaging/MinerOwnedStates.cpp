@@ -259,16 +259,7 @@ bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
         cout << "\nMessage handled by " << GetNameOfEntity(pMiner->ID())
             << " at time: " << Clock->GetCurrentTime();
 
-        SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
-
-        cout << "\n" << GetNameOfEntity(pMiner->ID())
-            << ": Ah don' wanna talk to you no more, you empty-headed animal food-trough wiper! Ah fart in your general direction! Your mother was a hamster, and your father smelt of elderberries!";
-
-        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
-            pMiner->ID(),        //ID of sender
-            ent_Drunkard,            //ID of recipient
-            Msg_Fighting,   //the message
-            NO_ADDITIONAL_INFO);
+        pMiner->GetFSM()->ChangeState(Fighting::Instance());
 
         return true;
 
@@ -312,3 +303,43 @@ bool EatStew::OnMessage(Miner* pMiner, const Telegram& msg)
 }
 
 
+//------------------------------------------------------------------------Fighting
+
+Fighting* Fighting::Instance()
+{
+    static Fighting instance;
+
+    return &instance;
+}
+
+
+void Fighting::Enter(Miner* pMiner)
+{
+    //cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "";
+}
+
+void Fighting::Execute(Miner* pMiner)
+{
+    cout << "\n" << GetNameOfEntity(pMiner->ID())
+        << ": Ah don' wanna talk to you no more, you empty-headed animal food-trough wiper! Ah fart in your general direction! Your mother was a hamster, and your father smelt of elderberries!";
+
+    Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+        pMiner->ID(),        //ID of sender
+        ent_Drunkard,            //ID of recipient
+        Msg_Fighting,   //the message
+        NO_ADDITIONAL_INFO);
+
+    pMiner->GetFSM()->RevertToPreviousState();
+}
+
+void Fighting::Exit(Miner* pMiner)
+{
+    //cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "";
+}
+
+
+bool Fighting::OnMessage(Miner* pMiner, const Telegram& msg)
+{
+    //send msg to global message handler
+    return false;
+}
