@@ -5,37 +5,37 @@
 
 enum message_type
 {
-  Msg_HiHoneyImHome,
-  Msg_StewReady,
-  Msg_WannaFight,
-  Msg_Fighting
+	Msg_HiHoneyImHome,
+	Msg_StewReady,
+	Msg_WannaFight,
+	Msg_Fighting
 };
 
 
 inline std::string MsgToStr(int msg)
 {
-  switch (msg)
-  {
-  case 0:
-    
-    return "HiHoneyImHome"; 
+	switch (msg)
+	{
+	case 0:
 
-  case 1:
-    
-    return "StewReady";
+		return "HiHoneyImHome";
 
-  case 2:
+	case 1:
 
-      return "WannaFight";
+		return "StewReady";
 
-  case 3:
+	case 2:
 
-      return "Fighting";
+		return "WannaFight";
 
-  default:
+	case 3:
 
-    return "Not recognized!";
-  }
+		return "Fighting";
+
+	default:
+
+		return "Not recognized!";
+	}
 }
 
 #endif

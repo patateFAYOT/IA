@@ -3,35 +3,35 @@
 
 #include <string>
 
-enum 
+enum
 {
-  ent_Miner_Bob,
+	ent_Miner_Bob,
 
-  ent_Elsa,
+	ent_Elsa,
 
-  ent_Drunkard
+	ent_Drunkard
 };
 
 inline std::string GetNameOfEntity(int n)
 {
-  switch(n)
-  {
-  case ent_Miner_Bob:
+	switch (n)
+	{
+	case ent_Miner_Bob:
 
-    return "Miner Bob";
+		return "Miner Bob";
 
-  case ent_Elsa:
-    
-    return "Elsa"; 
+	case ent_Elsa:
 
-  case ent_Drunkard:
+		return "Elsa";
 
-      return "Drunkard";
+	case ent_Drunkard:
 
-  default:
+		return "Drunkard";
 
-    return "UNKNOWN!";
-  }
+	default:
+
+		return "UNKNOWN!";
+	}
 }
 
 #endif

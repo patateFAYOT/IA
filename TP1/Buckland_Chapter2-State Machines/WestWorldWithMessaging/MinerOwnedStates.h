@@ -29,25 +29,25 @@ struct Telegram;
 class EnterMineAndDigForNugget : public State<Miner>
 {
 private:
-  
-  EnterMineAndDigForNugget(){}
 
-  //copy ctor and assignment should be private
-  EnterMineAndDigForNugget(const EnterMineAndDigForNugget&);
-  EnterMineAndDigForNugget& operator=(const EnterMineAndDigForNugget&);
- 
+	EnterMineAndDigForNugget() {}
+
+	//copy ctor and assignment should be private
+	EnterMineAndDigForNugget(const EnterMineAndDigForNugget&);
+	EnterMineAndDigForNugget& operator=(const EnterMineAndDigForNugget&);
+
 public:
 
-  //this is a singleton
-  static EnterMineAndDigForNugget* Instance();
+	//this is a singleton
+	static EnterMineAndDigForNugget* Instance();
 
-  virtual void Enter(Miner* miner);
+	virtual void Enter(Miner* miner);
 
-  virtual void Execute(Miner* miner);
+	virtual void Execute(Miner* miner);
 
-  virtual void Exit(Miner* miner);
+	virtual void Exit(Miner* miner);
 
-  virtual bool OnMessage(Miner* agent, const Telegram& msg);
+	virtual bool OnMessage(Miner* agent, const Telegram& msg);
 
 };
 
@@ -60,25 +60,25 @@ public:
 class VisitBankAndDepositGold : public State<Miner>
 {
 private:
-  
-  VisitBankAndDepositGold(){}
 
-  //copy ctor and assignment should be private
-  VisitBankAndDepositGold(const VisitBankAndDepositGold&);
-  VisitBankAndDepositGold& operator=(const VisitBankAndDepositGold&);
- 
+	VisitBankAndDepositGold() {}
+
+	//copy ctor and assignment should be private
+	VisitBankAndDepositGold(const VisitBankAndDepositGold&);
+	VisitBankAndDepositGold& operator=(const VisitBankAndDepositGold&);
+
 public:
 
-  //this is a singleton
-  static VisitBankAndDepositGold* Instance();
+	//this is a singleton
+	static VisitBankAndDepositGold* Instance();
 
-  virtual void Enter(Miner* miner);
+	virtual void Enter(Miner* miner);
 
-  virtual void Execute(Miner* miner);
+	virtual void Execute(Miner* miner);
 
-  virtual void Exit(Miner* miner);
+	virtual void Exit(Miner* miner);
 
-  virtual bool OnMessage(Miner* agent, const Telegram& msg);
+	virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
@@ -90,25 +90,25 @@ public:
 class GoHomeAndSleepTilRested : public State<Miner>
 {
 private:
-  
-  GoHomeAndSleepTilRested(){}
 
-  //copy ctor and assignment should be private
-  GoHomeAndSleepTilRested(const GoHomeAndSleepTilRested&);
-  GoHomeAndSleepTilRested& operator=(const GoHomeAndSleepTilRested&);
- 
+	GoHomeAndSleepTilRested() {}
+
+	//copy ctor and assignment should be private
+	GoHomeAndSleepTilRested(const GoHomeAndSleepTilRested&);
+	GoHomeAndSleepTilRested& operator=(const GoHomeAndSleepTilRested&);
+
 public:
 
-  //this is a singleton
-  static GoHomeAndSleepTilRested* Instance();
+	//this is a singleton
+	static GoHomeAndSleepTilRested* Instance();
 
-  virtual void Enter(Miner* miner);
+	virtual void Enter(Miner* miner);
 
-  virtual void Execute(Miner* miner);
+	virtual void Execute(Miner* miner);
 
-  virtual void Exit(Miner* miner);
+	virtual void Exit(Miner* miner);
 
-  virtual bool OnMessage(Miner* agent, const Telegram& msg);
+	virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
@@ -121,25 +121,25 @@ public:
 class QuenchThirst : public State<Miner>
 {
 private:
-  
-  QuenchThirst(){}
 
-  //copy ctor and assignment should be private
-  QuenchThirst(const QuenchThirst&);
-  QuenchThirst& operator=(const QuenchThirst&);
- 
+	QuenchThirst() {}
+
+	//copy ctor and assignment should be private
+	QuenchThirst(const QuenchThirst&);
+	QuenchThirst& operator=(const QuenchThirst&);
+
 public:
 
-  //this is a singleton
-  static QuenchThirst* Instance();
+	//this is a singleton
+	static QuenchThirst* Instance();
 
-  virtual void Enter(Miner* miner);
+	virtual void Enter(Miner* miner);
 
-  virtual void Execute(Miner* miner);
+	virtual void Execute(Miner* miner);
 
-  virtual void Exit(Miner* miner);
+	virtual void Exit(Miner* miner);
 
-  virtual bool OnMessage(Miner* agent, const Telegram& msg);
+	virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
@@ -151,25 +151,25 @@ public:
 class EatStew : public State<Miner>
 {
 private:
-  
-  EatStew(){}
 
-  //copy ctor and assignment should be private
-  EatStew(const EatStew&);
-  EatStew& operator=(const EatStew&);
- 
+	EatStew() {}
+
+	//copy ctor and assignment should be private
+	EatStew(const EatStew&);
+	EatStew& operator=(const EatStew&);
+
 public:
 
-  //this is a singleton
-  static EatStew* Instance();
+	//this is a singleton
+	static EatStew* Instance();
 
-  virtual void Enter(Miner* miner);
+	virtual void Enter(Miner* miner);
 
-  virtual void Execute(Miner* miner);
+	virtual void Execute(Miner* miner);
 
-  virtual void Exit(Miner* miner);
+	virtual void Exit(Miner* miner);
 
-  virtual bool OnMessage(Miner* agent, const Telegram& msg);
+	virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 

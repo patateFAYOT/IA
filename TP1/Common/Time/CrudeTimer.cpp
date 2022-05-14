@@ -3,7 +3,7 @@
 
 CrudeTimer* CrudeTimer::Instance()
 {
-  static CrudeTimer instance;
+	static CrudeTimer instance;
 
-  return &instance;
+	return &instance;
 }

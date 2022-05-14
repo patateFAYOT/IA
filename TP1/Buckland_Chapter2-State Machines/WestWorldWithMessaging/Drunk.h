@@ -28,44 +28,44 @@ class Drunk : public BaseGameEntity
 {
 private:
 
-    //an instance of the state machine class
-    StateMachine<Drunk>* m_pStateMachine;
+	//an instance of the state machine class
+	StateMachine<Drunk>* m_pStateMachine;
 
-    location_type         m_Location = saloon;
+	location_type         m_Location = saloon;
 
-    //the higher the value, the thirstier the miner
-    int                   m_iDrunkness;
+	//the higher the value, the thirstier the miner
+	int                   m_iDrunkness;
 
 public:
 
-    Drunk(int id):m_iDrunkness(0),BaseGameEntity(id)
-    {
-        //set up state machine
-        m_pStateMachine = new StateMachine<Drunk>(this);
+	Drunk(int id) :m_iDrunkness(0), BaseGameEntity(id)
+	{
+		//set up state machine
+		m_pStateMachine = new StateMachine<Drunk>(this);
 
-        m_pStateMachine->SetCurrentState(Drinking::Instance());
-    }
+		m_pStateMachine->SetCurrentState(Drinking::Instance());
+	}
 
-    ~Drunk() { delete m_pStateMachine; }
+	~Drunk() { delete m_pStateMachine; }
 
-    //this must be implemented
-    void Update();
+	//this must be implemented
+	void Update();
 
-    //so must this
-    virtual bool  HandleMessage(const Telegram& msg);
-
-
-    StateMachine<Drunk>* GetFSM()const { return m_pStateMachine; }
+	//so must this
+	virtual bool  HandleMessage(const Telegram& msg);
 
 
+	StateMachine<Drunk>* GetFSM()const { return m_pStateMachine; }
 
-    //-------------------------------------------------------------accessors
-    location_type Location()const { return m_Location; }
-    void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-    bool          isDrunk()const;
-    void          Drink() { m_iDrunkness += 2; }
-    void          Calming() { m_iDrunkness -= 1; }
+
+	//-------------------------------------------------------------accessors
+	location_type Location()const { return m_Location; }
+	void          ChangeLocation(location_type loc) { m_Location = loc; }
+
+	bool          isDrunk()const;
+	void          Drink() { m_iDrunkness += 2; }
+	void          Calming() { m_iDrunkness -= 1; }
 
 };
 
