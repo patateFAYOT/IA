@@ -44,5 +44,30 @@ public:
 };
 
 
+class GoingToSaloon : public State<Drunk>
+{
+private:
+
+	GoingToSaloon() {}
+
+	//copy ctor and assignment should be private
+	GoingToSaloon(const GoingToSaloon&);
+	GoingToSaloon& operator=(const GoingToSaloon&);
+
+public:
+
+	//this is a singleton
+	static GoingToSaloon* Instance();
+
+	virtual void Enter(Drunk* drunker);
+
+	virtual void Execute(Drunk* drunker);
+
+	virtual void Exit(Drunk* drunker);
+
+	virtual bool OnMessage(Drunk* drunker, const Telegram& msg);
+
+};
+
 
 #endif

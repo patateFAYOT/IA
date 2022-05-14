@@ -74,7 +74,7 @@ public:
     bool          isSober() {}
     bool          isDrunk() {}
     void          GetDrunk() { m_Drunkness++; }
-
+    void          Sleeping() { m_Drunkness--; }
 };
 
 
