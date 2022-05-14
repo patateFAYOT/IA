@@ -251,7 +251,22 @@ void QuenchThirst::Exit(Miner* pMiner)
 
 bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
 {
-  //send msg to global message handler
+    switch (msg.Msg)
+    {
+    case Msg_fight:
+
+        cout << "\nMessage handled by " << GetNameOfEntity(pMiner->ID())
+            << " at time: " << Clock->GetCurrentTime();
+
+        SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
+
+        cout << "\n" << GetNameOfEntity(pMiner->ID())
+            << ": Eat this you drunkard!";
+
+
+        return true;
+
+    }//end switch
   return false;
 }
 

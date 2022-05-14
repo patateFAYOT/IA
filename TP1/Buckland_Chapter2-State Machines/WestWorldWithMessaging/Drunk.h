@@ -72,9 +72,9 @@ public:
     location_type Location()const { return m_Location; }
     void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-    bool          isSober() {}
-    bool          isDrunk() {}
-    bool          WannaFight() {}
+    bool          isSober();
+    bool          isDrunk();
+    bool          WannaFight();
     void          GetDrunk() { m_Drunkness++; }
     void          Sleeping() { m_Drunkness--; }
 

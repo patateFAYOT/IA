@@ -63,6 +63,11 @@ void HangoverRecovery::Exit(Drunk* pDrunker)
         << "Slept well, goin' to the saloon";
 }
 
+bool HangoverRecovery::OnMessage(Drunk* pDrunker, const Telegram& msg)
+{
+    return false;
+}
+
 
 GoingToSaloon* GoingToSaloon::Instance()
 {
@@ -71,7 +76,17 @@ GoingToSaloon* GoingToSaloon::Instance()
     return &instance;
 }
 
+void GoingToSaloon::Enter(Drunk* pDrunker)
+{
+    //if the miner is not already located at the goldmine, he must
+    //change location to the gold mine
+    if (pDrunker->Location() != saloon)
+    {
+        cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": " << "Hay barman ! same as always";
 
+        pDrunker->ChangeLocation(saloon);
+    }
+}
 
 void GoingToSaloon::Execute(Drunk* pDrunker)
 {
@@ -94,6 +109,10 @@ void GoingToSaloon::Exit(Drunk* pDrunker)
         << "gonna clap some chicks";
 }
 
+bool GoingToSaloon::OnMessage(Drunk* pDrunker, const Telegram& msg)
+{
+    return false;
+}
 
 DrinkAndFight* DrinkAndFight::Instance()
 {
@@ -132,8 +151,13 @@ void DrinkAndFight::Execute(Drunk* pDrunker)
 
 }
 
-void GoingToSaloon::Exit(Drunk* pDrunker)
+void DrinkAndFight::Exit(Drunk* pDrunker)
 {
     cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
         << "I'm tired, goin' home";
+}
+
+bool DrinkAndFight::OnMessage(Drunk* pDrunker, const Telegram& msg)
+{
+    return false;
 }
