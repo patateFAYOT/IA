@@ -71,17 +71,7 @@ GoingToSaloon* GoingToSaloon::Instance()
     return &instance;
 }
 
-void GoingToSaloon::Enter(Drunk* pDrunker)
-{
-    //if the miner is not already located at the goldmine, he must
-    //change location to the gold mine
-    if (pDrunker->Location() != saloon)
-    {
-        pDrunker->ChangeLocation(saloon);
-    }
-    cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
-        << "Hey barman, the same as always !";
-}
+
 
 void GoingToSaloon::Execute(Drunk* pDrunker)
 {
@@ -102,4 +92,48 @@ void GoingToSaloon::Exit(Drunk* pDrunker)
 {
     cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
         << "gonna clap some chicks";
+}
+
+
+DrinkAndFight* DrinkAndFight::Instance()
+{
+    static DrinkAndFight instance;
+
+    return &instance;
+}
+
+void DrinkAndFight::Enter(Drunk* pDrunker)
+{
+    cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+        << "Damn bob, i hate him";
+}
+
+void DrinkAndFight::Execute(Drunk* pDrunker)
+{
+
+    if (!pDrunker->isDrunk())
+    {
+        pDrunker->GetDrunk();
+        
+        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+            pDrunker->ID(),        //ID of sender
+            ent_Miner_Bob,            //ID of recipient
+            Msg_fight,   //the message
+            NO_ADDITIONAL_INFO);
+
+        cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+            << "HEY BOB COME HERE YOU COWARD";
+
+    }
+    else
+    {
+        pDrunker->GetFSM()->ChangeState(HangoverRecovery::Instance());
+    }
+
+}
+
+void GoingToSaloon::Exit(Drunk* pDrunker)
+{
+    cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+        << "I'm tired, goin' home";
 }
