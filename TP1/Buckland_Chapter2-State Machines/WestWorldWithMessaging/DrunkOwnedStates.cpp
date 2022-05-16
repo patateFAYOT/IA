@@ -147,6 +147,16 @@ void DrinkAndFight::Execute(Drunk* pDrunker)
     }
     else
     {
+
+        cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+            << "too drunk, goin' back home";
+
+        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+            pDrunker->ID(),        //ID of sender
+            ent_Miner_Bob,            //ID of recipient
+            Msg_drunk,   //the message
+            NO_ADDITIONAL_INFO);
+
         pDrunker->GetFSM()->ChangeState(HangoverRecovery::Instance());
     }
 

@@ -245,7 +245,7 @@ void QuenchThirst::Execute(Miner* pMiner)
 
 void QuenchThirst::Exit(Miner* pMiner)
 { 
-  cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Leaving the saloon, feelin' good";
+    cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Leaving the saloon, feelin' good";
 }
 
 
@@ -260,14 +260,7 @@ bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
 
         SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
 
-        cout << "\n" << GetNameOfEntity(pMiner->ID())
-            << ": Eat this you drunkard!";
-
-        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
-            pMiner->ID(),        //ID of sender
-            ent_Roger,            //ID of recipient
-            Msg_fight,   //the message
-            NO_ADDITIONAL_INFO);
+        pMiner->GetFSM()->ChangeState(Fight::Instance());
 
         return true;
 
@@ -309,4 +302,65 @@ bool EatStew::OnMessage(Miner* pMiner, const Telegram& msg)
   return false;
 }
 
+
+Fight* Fight::Instance()
+{
+    static Fight instance;
+
+    return &instance;
+}
+
+
+void Fight::Enter(Miner* pMiner)
+{
+    cout << "\n" << GetNameOfEntity(pMiner->ID())
+        << ": Come here you drunkard!";
+}
+
+void Fight::Execute(Miner* pMiner)
+{
+    int random = rand() % 3;
+    if(random != 2)
+    { 
+        cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Eat that !";
+    }
+    else
+    {
+        pMiner->GetFSM()->ChangeState(QuenchThirst::Instance());
+    }
+
+}
+
+void Fight::Exit(Miner* pMiner)
+{
+    cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Hope you liked the taste of my fist !";
+
+    Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+        pMiner->ID(),        //ID of sender
+        ent_Roger,            //ID of recipient
+        Msg_fight,   //the message
+        NO_ADDITIONAL_INFO);
+}
+
+
+bool Fight::OnMessage(Miner* pMiner, const Telegram& msg)
+{
+    switch (msg.Msg)
+    {
+    case Msg_drunk:
+
+        cout << "\nMessage handled by " << GetNameOfEntity(pMiner->ID())
+            << " at time: " << Clock->GetCurrentTime();
+
+        SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
+
+        cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "You puke on yourself, gross !";
+
+        pMiner->GetFSM()->ChangeState(QuenchThirst::Instance());
+
+        return true;
+
+    }//end switch
+    return false;
+}
 
