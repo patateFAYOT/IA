@@ -133,7 +133,7 @@ void DrinkAndFight::Execute(Drunk* pDrunker)
     if (!pDrunker->isDrunk())
     {
         pDrunker->GetDrunk();
-        
+
         Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
             pDrunker->ID(),        //ID of sender
             ent_Miner_Bob,            //ID of recipient
@@ -159,5 +159,21 @@ void DrinkAndFight::Exit(Drunk* pDrunker)
 
 bool DrinkAndFight::OnMessage(Drunk* pDrunker, const Telegram& msg)
 {
+    switch (msg.Msg)
+    {
+    case Msg_fight:
+
+        SetTextColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+        cout << "\nMessage handled by " << GetNameOfEntity(pDrunker->ID())
+            << " at time: " << Clock->GetCurrentTime();
+
+
+        cout << "\n" << GetNameOfEntity(pDrunker->ID())
+            << ": OOF it hurts i'm going back home!";
+
+        pDrunker->GetFSM()->ChangeState(HangoverRecovery::Instance());
+        return true;
+
+    }//end switch
     return false;
 }

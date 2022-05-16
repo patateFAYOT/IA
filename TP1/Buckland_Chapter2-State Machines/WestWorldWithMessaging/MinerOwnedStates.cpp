@@ -260,9 +260,15 @@ bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
 
         SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
 
+
+        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+            pMiner->ID(),        //ID of sender
+            ent_Roger,            //ID of recipient
+            Msg_fight,   //the message
+            NO_ADDITIONAL_INFO);
+
         cout << "\n" << GetNameOfEntity(pMiner->ID())
             << ": Eat this you drunkard!";
-
 
         return true;
 
