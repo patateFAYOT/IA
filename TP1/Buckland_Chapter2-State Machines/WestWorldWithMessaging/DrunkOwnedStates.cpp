@@ -134,14 +134,15 @@ void DrinkAndFight::Execute(Drunk* pDrunker)
     {
         pDrunker->GetDrunk();
 
+        cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
+            << "HEY BOB COME HERE YOU COWARD";
+
         Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
             pDrunker->ID(),        //ID of sender
             ent_Miner_Bob,            //ID of recipient
             Msg_fight,   //the message
             NO_ADDITIONAL_INFO);
 
-        cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
-            << "HEY BOB COME HERE YOU COWARD";
 
     }
     else
@@ -153,8 +154,7 @@ void DrinkAndFight::Execute(Drunk* pDrunker)
 
 void DrinkAndFight::Exit(Drunk* pDrunker)
 {
-    cout << "\n" << GetNameOfEntity(pDrunker->ID()) << ": "
-        << "I'm tired, goin' home";
+
 }
 
 bool DrinkAndFight::OnMessage(Drunk* pDrunker, const Telegram& msg)
