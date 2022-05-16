@@ -66,7 +66,7 @@ bool DrunkAndQuarrel::OnMessage(Drunk* pDrunk, const Telegram& msg)
 	case Msg_Fighting:
 		SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		cout << "\nMessage handled by " << GetNameOfEntity(pDrunk->ID())
-			<< " at time: " << Clock->GetCurrentTime() << endl;
+			<< " at time: " << Clock->GetCurrentTime();
 
 		SetTextColor(FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 
