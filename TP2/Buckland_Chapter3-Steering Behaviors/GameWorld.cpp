@@ -12,6 +12,7 @@
 #include "misc/WindowUtils.h"
 #include "misc/Stream_Utility_Functions.h"
 #include "poursuiveur.h"
+#include "leader.h"
 
 #include "resource.h"
 
@@ -75,30 +76,31 @@ GameWorld::GameWorld(int cx, int cy):
     m_pCellSpace->AddEntity(pVehicle);
   }
 
-#define SHOAL
-#ifdef SHOAL
-  m_Vehicles[Prm.NumAgents-1]->Steering()->FlockingOff();
-  m_Vehicles[Prm.NumAgents-1]->SetScale(Vector2D(10, 10));
-  m_Vehicles[Prm.NumAgents-1]->Steering()->WanderOn();
-  m_Vehicles[Prm.NumAgents-1]->SetMaxSpeed(70);
-
-#define PURSUIT
-#ifdef PURSUIT
-  m_Vehicles[Prm.NumAgents - 2]->Steering()->FlockingOff();
-  m_Vehicles[Prm.NumAgents - 2]->SetScale(Vector2D(7, 7));
-  m_Vehicles[Prm.NumAgents - 2]->SetMaxSpeed(100);
-  m_Vehicles[Prm.NumAgents - 2]->Steering()->OffsetPursuitOn(m_Vehicles[Prm.NumAgents - 1], Vector2D(0, 1));
 
 
 
+#define LEADER
+#ifdef LEADER
+   Vector2D SpawnPos = Vector2D(cx / 2.0 + RandomClamped() * cx / 2.0,
+       cy / 2.0 + RandomClamped() * cy / 2.0);
+   Leader* l = new Leader(this,
+                          SpawnPos,                 //initial position
+                           RandFloat() * TwoPi,        //start rotation
+                           Vector2D(0, 0),            //velocity
+                           Prm.VehicleMass,          //mass
+                           Prm.MaxSteeringForce,     //max force
+                           Prm.MaxSpeed,             //max velocity
+                           Prm.MaxTurnRatePerSecond, //max turn rate
+                           Prm.VehicleScale);
+
+   for (int i = 0; i < Prm.NumAgents; ++i)
+   {
+       m_Vehicles[i]->Steering()->EvadeOn(l);
+
+   }
+   m_Vehicles.push_back(l);
 #endif
-
-   for (int i=0; i<Prm.NumAgents-2; ++i)
-  {
-    m_Vehicles[i]->Steering()->EvadeOn(m_Vehicles[Prm.NumAgents-1]);
-
-  }
-#endif
+   
  
   //create any obstacles or walls
   //CreateObstacles();

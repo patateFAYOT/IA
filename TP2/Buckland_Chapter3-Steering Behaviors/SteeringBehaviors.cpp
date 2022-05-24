@@ -733,7 +733,7 @@ Vector2D SteeringBehavior::Arrive(Vector2D     TargetPos,
   //calculate the distance to the target
   double dist = ToTarget.Length();
 
-  if (dist > 0)
+  if (dist > 10)
   {
     //because Deceleration is enumerated as an int, this value is required
     //to provide fine tweaking of the deceleration..

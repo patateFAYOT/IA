@@ -144,6 +144,7 @@ public:
   bool  ViewKeys()const{return m_bViewKeys;}
 
   void RenderCrosshair() { m_crosshair = !m_crosshair; }
+  bool GetCrossHair() { return m_crosshair; }
 
 };
 
