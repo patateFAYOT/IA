@@ -1,0 +1,9 @@
+﻿cl : ligne de commande warning D9035: l'option 'Gm' est déconseillée et sera supprimée dans une version ultérieure
+  GameWorld.cpp
+D:\DATA\IA_C++\code_source_devoir_2\Common\misc\CellSpacePartition.h(234,11): warning C4018: '>' : incompatibilité signed/unsigned
+D:\DATA\IA_C++\code_source_devoir_2\Common\misc\CellSpacePartition.h(228): message : pendant la compilation de la fonction membre classe modèle 'int CellSpacePartition<Vehicle *>::PositionToIndex(const Vector2D &) const'
+D:\DATA\IA_C++\code_source_devoir_2\Common\misc\CellSpacePartition.h(249): message : voir la référence à l'instanciation de la fonction modèle 'int CellSpacePartition<Vehicle *>::PositionToIndex(const Vector2D &) const' en cours de compilation
+D:\DATA\IA_C++\code_source_devoir_2\Common\misc\CellSpacePartition.h(130): message : pendant la compilation de la fonction membre classe modèle 'CellSpacePartition<Vehicle *>::CellSpacePartition(double,double,int,int,int)'
+D:\DATA\IA_C++\code_source_devoir_2\Buckland_Chapter3-Steering Behaviors\GameWorld.cpp(46): message : voir la référence à l'instanciation de la fonction modèle 'CellSpacePartition<Vehicle *>::CellSpacePartition(double,double,int,int,int)' en cours de compilation
+D:\DATA\IA_C++\code_source_devoir_2\Buckland_Chapter3-Steering Behaviors\GameWorld.cpp(46): message : voir la référence à l'instanciation classe modèle 'CellSpacePartition<Vehicle *>' en cours de compilation
+  Steering.vcxproj -> D:\DATA\IA_C++\code_source_devoir_2\Buckland_Chapter3-Steering Behaviors\Debug\Steering.exe

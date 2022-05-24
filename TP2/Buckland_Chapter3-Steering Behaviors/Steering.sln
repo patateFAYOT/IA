@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Steering", "Steering.vcxproj", "{64306CE7-B497-46CB-8A84-7E6634D4D34C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64306CE7-B497-46CB-8A84-7E6634D4D34C}.Debug|x86.ActiveCfg = Debug|Win32
+		{64306CE7-B497-46CB-8A84-7E6634D4D34C}.Debug|x86.Build.0 = Debug|Win32
+		{64306CE7-B497-46CB-8A84-7E6634D4D34C}.Release|x86.ActiveCfg = Release|Win32
+		{64306CE7-B497-46CB-8A84-7E6634D4D34C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41DDFB8A-FC33-4E76-9DA2-8A1818F8ABA2}
+	EndGlobalSection
+EndGlobal
