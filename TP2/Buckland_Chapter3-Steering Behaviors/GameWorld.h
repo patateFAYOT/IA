@@ -21,6 +21,8 @@
 #include "BaseGameEntity.h"
 #include "EntityFunctionTemplates.h"
 #include "vehicle.h"
+#include "Leader.h"
+#include "Follower.h"
 
 
 class Obstacle;
