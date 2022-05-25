@@ -21,7 +21,8 @@ Vehicle::Vehicle(GameWorld* world,
                double    max_force,
                double    max_speed,
                double    max_turn_rate,
-               double    scale):    MovingEntity(position,
+               double    scale,
+               Color     color):    MovingEntity(position,
                                                  scale,
                                                  velocity,
                                                  max_speed,
@@ -34,7 +35,8 @@ Vehicle::Vehicle(GameWorld* world,
                                        m_pWorld(world),
                                        m_vSmoothedHeading(Vector2D(0,0)),
                                        m_bSmoothingOn(false),
-                                       m_dTimeElapsed(0.0)
+                                       m_dTimeElapsed(0.0),
+                                       m_color(color)
 {  
   InitializeBuffer();
 
@@ -131,7 +133,17 @@ void Vehicle::Render()
 
   else
   {
-    gdi->BluePen();
+      switch (m_color)
+      {
+      case red:
+          gdi->RedPen();
+          break;
+      case blue:
+          gdi->BluePen();
+          break;
+      case green:
+          gdi->GreenPen();
+      }
   }
 
   if (Steering()->isInterposeOn())

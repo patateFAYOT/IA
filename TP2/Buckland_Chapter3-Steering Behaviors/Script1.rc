@@ -53,6 +53,10 @@ BEGIN
     BEGIN
         MENUITEM "On/Off",                      ID_MENU_SMOOTHING
     END
+	POPUP "Leader"
+	BEGIN
+		MENUITEM "Controllable",				ID_LEADER_CONTROLLABLE
+	END
 END
 
 

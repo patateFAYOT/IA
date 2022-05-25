@@ -13,7 +13,8 @@ Follower::Follower(GameWorld* world,
 	double    max_turn_rate,
 	double    scale,
 	Vehicle* agent,
-	const Vector2D  offset) : Vehicle(world, position, rotation, velocity, mass, max_force, max_speed, max_turn_rate, scale)
+	const Vector2D  offset, 
+	Color m_color) : Vehicle(world, position, rotation, velocity, mass, max_force, max_speed, max_turn_rate, scale, m_color)
 {
 	Steering()->OffsetPursuitOn(agent, offset);
 }

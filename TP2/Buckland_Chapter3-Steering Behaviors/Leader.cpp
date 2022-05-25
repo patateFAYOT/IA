@@ -9,7 +9,23 @@ Leader::Leader(GameWorld* world,
 	double    max_force,
 	double    max_speed,
 	double    max_turn_rate,
-	double    scale) : Vehicle(world, position, rotation, velocity, mass, max_force, max_speed, max_turn_rate, scale)
+	double    scale, 
+	Color m_color) : Vehicle(world, position, rotation, velocity, mass, max_force, max_speed, max_turn_rate, scale, m_color)
 {
 	Steering()->WanderOn();
+}
+
+void Leader::toggleControlled()
+{
+	m_controlled = !m_controlled;
+	if (m_controlled)
+	{
+		Steering()->SeekOn();
+		Steering()->WanderOff();
+	}
+	else
+	{
+		Steering()->SeekOff();
+		Steering()->WanderOn();
+	}
 }

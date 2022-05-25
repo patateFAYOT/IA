@@ -6,7 +6,7 @@
 class Leader : public Vehicle
 {
 private:
-	bool m_controlled;
+	bool m_controlled = false;
 public:
 	Leader(GameWorld* world,
 		Vector2D position,
@@ -16,10 +16,11 @@ public:
 		double    max_force,
 		double    max_speed,
 		double    max_turn_rate,
-		double    scale);
+		double    scale, 
+		Color m_color);
 
 	bool isControlled() { return m_controlled; }
-	void toggleControlled() { m_controlled = !m_controlled; }
+	void toggleControlled();
 };
 
 #endif

@@ -81,8 +81,7 @@ private:
   void CreateObstacles();
 
   void CreateWalls();
-
-  
+    
 
 public:
   

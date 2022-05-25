@@ -101,20 +101,17 @@ GameWorld::GameWorld(int cx, int cy) :
 		Prm.MaxSteeringForce,     //max force
 		Prm.MaxSpeed,             //max velocity
 		Prm.MaxTurnRatePerSecond, //max turn rate
-		Prm.VehicleScale        //scale
+		Prm.VehicleScale,        //scale
+		Color::red				//color
 	);
 	m_Vehicles.push_back(leader);
 	m_pCellSpace->AddEntity(leader);
 	leader->SetScale(Vector2D(10, 10));
 
 	Vehicle* ahead = leader;
-	Vector2D offset = Vector2D(1, 1);
+	Vector2D offset = Vector2D(0, -10);
 
-	for (int i = 0; i < 20; i++)
-	{
-		//determine a random starting position
-		Vector2D SpawnPos = Vector2D((3.0 + i ) / 25 * cx, cy / 2.0);
-
+		Vector2D SpawnPos = Vector2D(2.0 / 25 * cx, cy / 2.0);
 
 		Follower* pFollower = new Follower(this,
 			SpawnPos,                 //initial position
@@ -125,8 +122,63 @@ GameWorld::GameWorld(int cx, int cy) :
 			Prm.MaxSpeed,             //max velocity
 			Prm.MaxTurnRatePerSecond, //max turn rate
 			Prm.VehicleScale,        //scale
+			m_Vehicles[0],
+			Vector2D(-150, 0),
+			Color::green);				//color
+		m_Vehicles.push_back(pFollower);
+		//add it to the cell subdivision
+		m_pCellSpace->AddEntity(pFollower);
+
+		pFollower = new Follower(this,
+			SpawnPos,                 //initial position
+			RandFloat() * TwoPi,        //start rotation
+			Vector2D(0, 0),            //velocity
+			Prm.VehicleMass,          //mass
+			Prm.MaxSteeringForce,     //max force
+			Prm.MaxSpeed,             //max velocity
+			Prm.MaxTurnRatePerSecond, //max turn rate
+			Prm.VehicleScale,        //scale
+			m_Vehicles[0],
+			Vector2D(150, 0),
+			Color::green);				//color
+		m_Vehicles.push_back(pFollower);
+		//add it to the cell subdivision
+		m_pCellSpace->AddEntity(pFollower);
+
+		pFollower = new Follower(this,
+			SpawnPos,                 //initial position
+			RandFloat() * TwoPi,        //start rotation
+			Vector2D(0, 0),            //velocity
+			Prm.VehicleMass,          //mass
+			Prm.MaxSteeringForce,     //max force
+			Prm.MaxSpeed,             //max velocity
+			Prm.MaxTurnRatePerSecond, //max turn rate
+			Prm.VehicleScale,        //scale
+			m_Vehicles[0],
+			Vector2D(0, 15),
+			Color::green);				//color
+		m_Vehicles.push_back(pFollower);
+		//add it to the cell subdivision
+		m_pCellSpace->AddEntity(pFollower);
+
+	for (int i = 0; i < 20; i++)
+	{
+		//determine a random starting position
+		SpawnPos = Vector2D((3.0 + i ) / 25 * cx, cy / 2.0);
+
+
+		pFollower = new Follower(this,
+			SpawnPos,                 //initial position
+			RandFloat() * TwoPi,        //start rotation
+			Vector2D(0, 0),            //velocity
+			Prm.VehicleMass,          //mass
+			Prm.MaxSteeringForce,     //max force
+			Prm.MaxSpeed,             //max velocity
+			Prm.MaxTurnRatePerSecond, //max turn rate
+			Prm.VehicleScale,        //scale
 			ahead,
-			offset);
+			offset,
+			Color::blue);				//color
 
 		m_Vehicles.push_back(pFollower);
 
@@ -354,24 +406,8 @@ void GameWorld::HandleKeyPresses(WPARAM wParam)
 		}
 		break;
 
-
-		// Controls for the leader agent
-	case VK_UP:
-		break;
-
-	case VK_DOWN:
-		break;
-
-	case VK_LEFT:
-		break;
-
-	case VK_RIGHT:
-		break;
-
 	}//end switch
 }
-
-
 
 //-------------------------- HandleMenuItems -----------------------------
 void GameWorld::HandleMenuItems(WPARAM wParam, HWND hwnd)
@@ -563,6 +599,16 @@ void GameWorld::HandleMenuItems(WPARAM wParam, HWND hwnd)
 		}
 
 		CheckMenuItemAppropriately(hwnd, ID_MENU_SMOOTHING, m_Vehicles[0]->isSmoothingOn());
+	}
+
+	break;
+
+	case ID_LEADER_CONTROLLABLE:
+	{
+		Leader* leader = (Leader*)m_Vehicles[0];
+		leader->toggleControlled();
+
+		CheckMenuItemAppropriately(hwnd, ID_LEADER_CONTROLLABLE, leader->isControlled());
 	}
 
 	break;

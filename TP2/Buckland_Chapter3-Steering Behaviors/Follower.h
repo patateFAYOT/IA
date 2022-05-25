@@ -16,7 +16,8 @@ public:
 		double    max_turn_rate,
 		double    scale,
 		Vehicle* agent,
-		const Vector2D  offset);
+		const Vector2D  offset, 
+		Color m_color);
 };
 
 #endif

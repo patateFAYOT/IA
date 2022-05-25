@@ -23,6 +23,8 @@ class SteeringBehavior;
 
 
 
+enum Color { red, blue, green };
+
 class Vehicle : public MovingEntity
 {
 
@@ -63,6 +65,8 @@ private:
   Vehicle(const Vehicle&);
   Vehicle& operator=(const Vehicle&);
 
+  Color m_color = blue;
+
 
 public:
 
@@ -74,7 +78,8 @@ public:
          double    max_force,
          double    max_speed,
          double    max_turn_rate,
-         double    scale);
+         double    scale,
+         Color     color);
 
   ~Vehicle();
 

@@ -134,8 +134,7 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
       }//end WM_KEYUP
 
       break;
-
-    
+          
     case WM_PAINT:
       {
  		       
