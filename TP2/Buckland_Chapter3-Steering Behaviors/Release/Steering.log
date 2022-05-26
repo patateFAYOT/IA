@@ -1,0 +1,44 @@
+﻿  Vector2d.cpp
+  Cgdi.cpp
+  iniFileLoaderBase.cpp
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\iniFileLoaderBase.cpp(9,42): warning C4305: 'argument' : troncation de 'int' à 'const _Elem'
+          with
+          [
+              _Elem=char
+          ]
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\iniFileLoaderBase.cpp(9,38): warning C4309: 'argument' : troncation de valeur de constante
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\iniFileLoaderBase.cpp(57,23): warning C4129: ';' : caractère de séquence d'échappement non reconnu
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\iniFileLoaderBase.cpp(109,23): warning C4129: ';' : caractère de séquence d'échappement non reconnu
+  WindowUtils.cpp
+  PrecisionTimer.cpp
+  Follower.cpp
+  GameWorld.cpp
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(234,11): warning C4018: '>' : incompatibilité signed/unsigned
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(228): message : pendant la compilation de la fonction membre classe modèle 'int CellSpacePartition<Vehicle *>::PositionToIndex(const Vector2D &) const'
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(249): message : voir la référence à l'instanciation de la fonction modèle 'int CellSpacePartition<Vehicle *>::PositionToIndex(const Vector2D &) const' en cours de compilation
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(130): message : pendant la compilation de la fonction membre classe modèle 'CellSpacePartition<Vehicle *>::CellSpacePartition(double,double,int,int,int)'
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Buckland_Chapter3-Steering Behaviors\GameWorld.cpp(46): message : voir la référence à l'instanciation de la fonction modèle 'CellSpacePartition<Vehicle *>::CellSpacePartition(double,double,int,int,int)' en cours de compilation
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Buckland_Chapter3-Steering Behaviors\GameWorld.cpp(46): message : voir la référence à l'instanciation classe modèle 'CellSpacePartition<Vehicle *>' en cours de compilation
+  Leader.cpp
+  main.cpp
+  Obstacle.cpp
+  ParamLoader.cpp
+  Path.cpp
+  SteeringBehaviors.cpp
+  Vehicle.cpp
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(234,11): warning C4018: '>' : incompatibilité signed/unsigned
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(228): message : pendant la compilation de la fonction membre classe modèle 'int CellSpacePartition<Vehicle *>::PositionToIndex(const Vector2D &) const'
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(265): message : voir la référence à l'instanciation de la fonction modèle 'int CellSpacePartition<Vehicle *>::PositionToIndex(const Vector2D &) const' en cours de compilation
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Common\misc\CellSpacePartition.h(262): message : pendant la compilation de la fonction membre classe modèle 'void CellSpacePartition<Vehicle *>::UpdateEntity(const entity &,Vector2D)'
+          with
+          [
+              entity=Vehicle *
+          ]
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Buckland_Chapter3-Steering Behaviors\Vehicle.cpp(109): message : voir la référence à l'instanciation de la fonction modèle 'void CellSpacePartition<Vehicle *>::UpdateEntity(const entity &,Vector2D)' en cours de compilation
+          with
+          [
+              entity=Vehicle *
+          ]
+D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Buckland_Chapter3-Steering Behaviors\Vehicle.cpp(109): message : voir la référence à l'instanciation classe modèle 'CellSpacePartition<Vehicle *>' en cours de compilation
+  Génération de code en cours...
+  Steering.vcxproj -> D:\Watashi\scolaire\ISIMA\ZZ3 (UQAC - Maîtrise en jeux vidéo)\Été 2022\IA pour le JV\IA\TP2\Buckland_Chapter3-Steering Behaviors\Release\Steering.exe
