@@ -101,7 +101,33 @@ GameWorld::GameWorld(int cx, int cy):
    m_Vehicles.push_back(l);
 #endif
    
- 
+   for (int a = 0; a < 20; ++a)
+   {
+
+       //determine a random starting position
+       Vector2D SpawnPos = Vector2D(cx / 2.0 + RandomClamped() * cx / 2.0,
+           cy / 2.0 + RandomClamped() * cy / 2.0);
+
+
+       Vehicle* pVehicle = new Poursuiveur(this,
+           SpawnPos,                 //initial position
+           RandFloat() * TwoPi,        //start rotation
+           Vector2D(0, 0),            //velocity
+           Prm.VehicleMass,          //mass
+           Prm.MaxSteeringForce,     //max force
+           Prm.MaxSpeed,             //max velocity
+           Prm.MaxTurnRatePerSecond, //max turn rate
+           Prm.VehicleScale,        //scale
+           m_Vehicles[m_Vehicles.size() - 1],
+           Vector2D(0, 2 * (a%2 ? 1 : -1)));
+
+       m_Vehicles.push_back(pVehicle);
+
+       //add it to the cell subdivision
+       m_pCellSpace->AddEntity(pVehicle);
+   }
+
+
   //create any obstacles or walls
   //CreateObstacles();
   //CreateWalls();
