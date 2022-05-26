@@ -101,7 +101,7 @@ GameWorld::GameWorld(int cx, int cy):
    m_Vehicles.push_back(l);
 #endif
    
-   int aile = 10;
+   int aile = 20;
    for (int a = 0; a < aile; ++a)
    {
 
@@ -119,8 +119,9 @@ GameWorld::GameWorld(int cx, int cy):
            Prm.MaxSpeed,             //max velocity
            Prm.MaxTurnRatePerSecond, //max turn rate
            Prm.VehicleScale,        //scale
+           l,
            m_Vehicles[m_Vehicles.size() - 1],
-           Vector2D(-10,20));
+           Vector2D(-sin(2 * Pi * a/ aile) * 50, cos(2 * Pi * a / aile) * 50));
 
        m_Vehicles.push_back(pVehicle);
 
@@ -129,31 +130,6 @@ GameWorld::GameWorld(int cx, int cy):
    }
 
 
-   for (int a = 0; a < aile; ++a)
-   {
-
-       //determine a random starting position
-       Vector2D SpawnPos = Vector2D(cx / 2.0 + RandomClamped() * cx / 2.0,
-           cy / 2.0 + RandomClamped() * cy / 2.0);
-
-
-       Vehicle* pVehicle = new Poursuiveur(this,
-           SpawnPos,                 //initial position
-           RandFloat() * TwoPi,        //start rotation
-           Vector2D(0, 0),            //velocity
-           Prm.VehicleMass,          //mass
-           Prm.MaxSteeringForce,     //max force
-           Prm.MaxSpeed,             //max velocity
-           Prm.MaxTurnRatePerSecond, //max turn rate
-           Prm.VehicleScale,        //scale
-           (a == 0 ? l : m_Vehicles[m_Vehicles.size() - 1]),
-           Vector2D(-20, -10));
-
-       m_Vehicles.push_back(pVehicle);
-
-       //add it to the cell subdivision
-       m_pCellSpace->AddEntity(pVehicle);
-   }
 
   //create any obstacles or walls
   //CreateObstacles();

@@ -6,6 +6,10 @@
 
 class Poursuiveur : public Vehicle {
 
+private:
+    Vector2D offset;
+    Vehicle* Leader;
+    Vehicle* neighbour;
 public: 
     Poursuiveur(
         GameWorld* world,
@@ -18,7 +22,11 @@ public:
         double    max_turn_rate,
         double    scale,
         Vehicle* target,
+        Vehicle* neigbour,
         Vector2D offset);
 
+    void Update(double time_elapsed);
 };
+
+
 #endif
