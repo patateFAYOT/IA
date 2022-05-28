@@ -134,9 +134,14 @@ void Vehicle::Render()
     gdi->BluePen();
   }
 
-  if (Steering()->isInterposeOn())
+  if (Steering()->isOffsetPursuitOn())
   {
     gdi->RedPen();
+  }
+
+  if (this->MaxSpeed() == 70)
+  {
+      gdi->GreenPen();
   }
 
   if (Steering()->isHideOn())

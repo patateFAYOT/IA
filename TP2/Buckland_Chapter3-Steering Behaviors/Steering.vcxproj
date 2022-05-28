@@ -66,6 +66,7 @@
       <PrecompiledHeaderOutputFile>.\Release\Steering.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>C:\Users\Ilyes\Documents\GitHub\IA\TP2\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>

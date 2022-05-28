@@ -101,7 +101,7 @@ GameWorld::GameWorld(int cx, int cy):
    m_Vehicles.push_back(l);
 #endif
    
-   int aile = 20;
+   int aile = 10;
    for (int a = 0; a < aile; ++a)
    {
 
@@ -362,6 +362,12 @@ void GameWorld::HandleMenuItems(WPARAM wParam, HWND hwnd)
 {
   switch(wParam)
   {
+
+    case ID_CROSS_HAIR:
+    
+      RenderCrosshair();
+
+    break;
     case ID_OB_OBSTACLES:
 
         m_bShowObstacles = !m_bShowObstacles;

@@ -33,6 +33,10 @@ BEGIN
         MENUITEM "Walls On/Off",                ID_OB_WALLS
         MENUITEM "Obstacles On/Off",            ID_OB_OBSTACLES
     END
+    POPUP "Type of play"
+    BEGIN
+    MENUITEM "CrossHair On/Off",                ID_CROSS_HAIR
+    END
     POPUP "Space Partitioning"
     BEGIN
         MENUITEM "On/Off",                      IDR_PARTITIONING
