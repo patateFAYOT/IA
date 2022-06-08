@@ -13,6 +13,7 @@
 //-----------------------------------------------------------------------------
 #include <map>
 #include "2d/vector2d.h"
+#include "Fuzzy/FuzzyModule.h"
 
 class Raven_Bot;
 class Raven_Weapon;
@@ -27,6 +28,8 @@ private:
   typedef std::map<int, Raven_Weapon*>  WeaponMap;
 
 private:
+
+  FuzzyModule      m_FuzzyModule;
 
   Raven_Bot*       m_pOwner;
 
@@ -60,6 +63,10 @@ private:
   //adds a random deviation to the firing angle not greater than m_dAimAccuracy 
   //rads
   void        AddNoiseToAim(Vector2D& AimingPos)const;
+
+  void     InitializeFuzzyModule();
+
+  double     GetDeviation();
 
 public:
 

@@ -16,6 +16,8 @@
 #include "game/MovingEntity.h"
 #include "misc/utils.h"
 #include "Raven_TargetingSystem.h"
+#include "fuzzy/FuzzyOperators.h"
+#include "fuzzy/FuzzyOperators.h"
 
 
 class Raven_PathPlanner;
@@ -42,6 +44,8 @@ private:
 
   //alive, dead or spawning?
   Status                             m_Status;
+
+  
 
   //a pointer to the world data
   Raven_Game*                        m_pWorld;
