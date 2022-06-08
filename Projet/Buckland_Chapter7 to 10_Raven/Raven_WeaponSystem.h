@@ -66,7 +66,7 @@ private:
 
   void     InitializeFuzzyModule();
 
-  double     GetDeviation();
+
 
 public:
 
@@ -76,6 +76,8 @@ public:
                      double      AimPersistance);
   
   ~Raven_WeaponSystem();
+
+  double     GetDeviation();
 
   //sets up the weapon map with just one weapon: the blaster
   void          Initialize();
