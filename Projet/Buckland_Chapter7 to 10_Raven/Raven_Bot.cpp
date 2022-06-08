@@ -158,8 +158,7 @@ void Raven_Bot::Update()
     }
 
     //this method aims the bot's current weapon at the current target
-    //and takes a shot if a shot is possible
-    double m_dAimAccuracy = m_pWeaponSys->GetDeviation();
+    //and takes a shot if a shot is 
 
     m_pWeaponSys->TakeAimAndShoot();
   }
