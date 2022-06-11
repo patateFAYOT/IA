@@ -146,6 +146,8 @@ public:
 
   //when called will release any possessed bot from user control
   void        ExorciseAnyPossessedBot();
+
+  void        ClearAllTeams();
  
   //if a bot is possessed the keyboard is polled for user input and any 
   //relevant bot methods are called appropriately

@@ -81,6 +81,8 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
                                         script->GetDouble("Bot_AimPersistance"));
 
   m_pSensoryMem = new Raven_SensoryMemory(this, script->GetDouble("Bot_MemorySpan"));
+
+  m_team = 0;
 }
 
 //-------------------------------- dtor ---------------------------------------
@@ -224,6 +226,10 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
   //handle any messages not handles by the goals
   switch(msg.Msg)
   {
+  case Msg_TargetTeam1:
+
+
+    return true;
   case Msg_TakeThatMF:
 
     //just return if already dead or spawning

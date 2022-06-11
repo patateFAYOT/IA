@@ -22,14 +22,14 @@
 #include "armory/Projectile_Pellet.h"
 #include "armory/Projectile_Slug.h"
 #include "armory/Projectile_Bolt.h"
-
+#include "Debug/DebugConsole.h"
 #include "goals/Goal_Think.h"
 #include "goals/Raven_Goal_Types.h"
 
 
 
 //uncomment to write object creation/deletion to debug console
-//#define  LOG_CREATIONAL_STUFF
+#define  LOG_CREATIONAL_STUFF
 
 
 //----------------------------- ctor ------------------------------------------
@@ -263,7 +263,7 @@ void Raven_Game::AddBots(unsigned int NumBotsToAdd)
 
     
 #ifdef LOG_CREATIONAL_STUFF
-  debug_con << "Adding bot with ID " << ttos(rb->ID()) << "";
+  //debug_con << "Adding bot with ID " << ttos(rb->ID()) << "";
 #endif
   }
 }
@@ -414,7 +414,13 @@ void Raven_Game::ExorciseAnyPossessedBot()
   if (m_pSelectedBot) m_pSelectedBot->Exorcise();
 }
 
-
+void Raven_Game::ClearAllTeams()
+{
+    for (auto& it : m_Bots)
+    {
+        it->SetTeam(0);
+    }
+}
 //-------------------------- ClickRightMouseButton -----------------------------
 //
 //  this method is called when the user clicks the right mouse button.
@@ -432,13 +438,28 @@ void Raven_Game::ClickRightMouseButton(POINTS p)
   //if there is no selected bot just return;
   if (!pBot && m_pSelectedBot == NULL) return;
 
-  //if the cursor is over a different bot to the existing selection,
-  //change selection
+ 
+  if (m_pSelectedBot != NULL && !m_pSelectedBot->GetTeam())
+  {
+      m_pSelectedBot->SetTeam(1);
+  }
+
+  //if the cursor is over a different bot to the existing selection
+ //
   if (pBot && pBot != m_pSelectedBot)
   { 
-    if (m_pSelectedBot) m_pSelectedBot->Exorcise();
-    m_pSelectedBot = pBot;
+      if (m_pSelectedBot)
+      {
+            if(!pBot->GetTeam()) 
+                pBot->SetTeam(1);
+            #ifdef LOG_CREATIONAL_STUFF
+            debug_con << "Adding someone to team " << m_pSelectedBot->GetTeam() << "";
+            #endif
+            return;
+      }
 
+
+     m_pSelectedBot = pBot;
     return;
   }
 
@@ -478,7 +499,20 @@ void Raven_Game::ClickLeftMouseButton(POINTS p)
 {
   if (m_pSelectedBot && m_pSelectedBot->isPossessed())
   {
+    Raven_Bot* pBot = GetBotAtPosition(POINTStoVector(p));
     m_pSelectedBot->FireWeapon(POINTStoVector(p));
+
+    if (pBot)
+    {
+        for (auto it : m_Bots)
+        {
+            Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                m_pSelectedBot->ID(),
+                it->ID(),
+                Msg_TargetTeam1,
+                pBot);
+        }
+    }
   }
 }
 

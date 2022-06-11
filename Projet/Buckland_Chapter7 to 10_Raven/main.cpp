@@ -159,6 +159,7 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
          case 'X':
 
            g_pRaven->ExorciseAnyPossessedBot();
+           g_pRaven->ClearAllTeams();
 
            break;
 

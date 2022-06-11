@@ -11,7 +11,7 @@
 #include "Goal_Wander.h"
 #include "Raven_Goal_Types.h"
 #include "Goal_AttackTarget.h"
-
+#include "Goal_HuntTarget.h"
 
 #include "GetWeaponGoal_Evaluator.h"
 #include "GetHealthGoal_Evaluator.h"
@@ -147,6 +147,7 @@ void Goal_Think::AddGoal_Explore()
     AddSubgoal( new Goal_Explore(m_pOwner));
   }
 }
+
 
 void Goal_Think::AddGoal_GetItem(unsigned int ItemType)
 {
