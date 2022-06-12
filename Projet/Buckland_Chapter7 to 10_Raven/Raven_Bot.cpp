@@ -227,7 +227,12 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
   switch(msg.Msg)
   {
   case Msg_TargetTeam1:
-
+      if (m_team == 1)
+      {
+          m_givenTarget = (Raven_Bot*) msg.ExtraInfo;
+          m_destination = m_givenTarget->Pos();
+          m_pBrain->AddGoal_MoveToPosition(m_destination);
+      }
 
     return true;
   case Msg_TakeThatMF:

@@ -111,6 +111,8 @@ private:
 
   //Team du BOT : 0 = match sans équipe / 1 = team du joueur
   unsigned int						 m_team;
+  Vector2D							 m_destination;
+  Raven_Bot*						 m_givenTarget;
 
   //a vertex buffer containing the bot's geometry
   std::vector<Vector2D>              m_vecBotVB;
@@ -169,6 +171,8 @@ public:
   void          SetDead(){m_Status = dead;}
   void          SetAlive(){m_Status = alive;}
   void			SetTeam(unsigned int id_team) { m_team = id_team; }
+  void			SetDestination(Vector2D pos) { m_destination = pos; }
+  void			SetGivenTarget(Raven_Bot* target) { m_givenTarget = target; }
   //returns a value indicating the time in seconds it will take the bot
   //to reach the given position at its current speed.
   double        CalculateTimeToReachPosition(Vector2D pos)const; 
@@ -218,6 +222,8 @@ public:
   Raven_WeaponSystem* const          GetWeaponSys()const{return m_pWeaponSys;}
   Raven_SensoryMemory* const         GetSensoryMem()const{return m_pSensoryMem;}
   unsigned int const				 GetTeam()const { return m_team; }
+  Vector2D							 GetDestination()const { return m_destination; }
+  Raven_Bot*						 GetGivenTarget()const { return m_givenTarget; }
 
 
 };
