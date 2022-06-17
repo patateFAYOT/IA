@@ -27,6 +27,7 @@ Raven_Steering::Raven_Steering(Raven_Game* world, Raven_Bot* agent):
              m_iFlags(0),
              m_dWeightSeparation(script->GetDouble("SeparationWeight")),
              m_dWeightWander(script->GetDouble("WanderWeight")),
+            m_dWeightFlee(script->GetDouble("FleeWeight")),
              m_dWeightWallAvoidance(script->GetDouble("WallAvoidanceWeight")),
              m_dViewDistance(script->GetDouble("ViewDistance")),
              m_dWallDetectionFeelerLength(script->GetDouble("WallDetectionFeelerLength")),
@@ -196,6 +197,12 @@ Vector2D Raven_Steering::CalculatePrioritized()
     if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
   }
 
+  if (On(flee))
+  {
+      force = Flee(m_fleePosition) * m_dWeightFlee;
+
+      if (!AccumulateForce(m_vSteeringForce, force)) return m_vSteeringForce;
+  }
 
   return m_vSteeringForce;
 }
@@ -217,6 +224,17 @@ Vector2D Raven_Steering::Seek(const Vector2D &target)
   return (DesiredVelocity - m_pRaven_Bot->Velocity());
 }
 
+//----------------------------- Flee -------------------------------------
+//
+//  Does the opposite of Seek
+//------------------------------------------------------------------------
+Vector2D Raven_Steering::Flee(const Vector2D& target)
+{
+    Vector2D DesiredVelocity = Vec2DNormalize(m_pRaven_Bot->Pos() - target)
+        * m_pRaven_Bot->MaxSpeed();
+
+    return (DesiredVelocity - m_pRaven_Bot->Velocity());
+}
 
 //--------------------------- Arrive -------------------------------------
 //

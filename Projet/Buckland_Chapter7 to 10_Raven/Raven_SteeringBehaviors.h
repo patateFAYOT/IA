@@ -53,6 +53,7 @@ private:
   {
     none               = 0x00000,
     seek               = 0x00002,
+    flee = 0x00004,
     arrive             = 0x00008,
     wander             = 0x00010,
     separation         = 0x00040,
@@ -91,6 +92,9 @@ private:
   //attempting to steer towards
   Vector2D     m_vWanderTarget; 
 
+  // flee position
+  Vector2D    m_fleePosition;
+
   //explained above
   double        m_dWanderJitter;
   double        m_dWanderRadius;
@@ -103,6 +107,7 @@ private:
   double        m_dWeightWander;
   double        m_dWeightWallAvoidance;
   double        m_dWeightSeek;
+  double        m_dWeightFlee;
   double        m_dWeightArrive;
 
 
@@ -146,6 +151,11 @@ private:
 
   //this behavior moves the agent towards a target position
   Vector2D Seek(const Vector2D &target);
+
+
+  //this behavior returns a vector that moves the agent away
+  //from a target position
+  Vector2D Flee(const Vector2D& target);
 
   //this behavior is similar to seek but it attempts to arrive 
   //at the target with a zero velocity
@@ -203,6 +213,7 @@ public:
   void      SetSummingMethod(summing_method sm){m_SummingMethod = sm;}
 
 
+  void FleeOn(Vector2D position) { m_iFlags |= flee; m_fleePosition = position; }
   void SeekOn(){m_iFlags |= seek;}
   void ArriveOn(){m_iFlags |= arrive;}
   void WanderOn(){m_iFlags |= wander;}
@@ -210,12 +221,14 @@ public:
   void WallAvoidanceOn(){m_iFlags |= wall_avoidance;}
 
   void SeekOff()  {if(On(seek))   m_iFlags ^=seek;}
+  void FleeOff() { if (On(flee))   m_iFlags ^= flee; }
   void ArriveOff(){if(On(arrive)) m_iFlags ^=arrive;}
   void WanderOff(){if(On(wander)) m_iFlags ^=wander;}
   void SeparationOff(){if(On(separation)) m_iFlags ^=separation;}
   void WallAvoidanceOff(){if(On(wall_avoidance)) m_iFlags ^=wall_avoidance;}
 
   bool SeekIsOn(){return On(seek);}
+  bool FleeIsOn() { return On(flee); }
   bool ArriveIsOn(){return On(arrive);}
   bool WanderIsOn(){return On(wander);}
   bool SeparationIsOn(){return On(separation);}
