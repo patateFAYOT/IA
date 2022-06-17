@@ -20,7 +20,7 @@ double MoveToPositionGoal_Evaluator::CalculateDesirability(Raven_Bot* pBot)
     double Desirability = 0.0;
 
     //only do the calculation if there is a target present
-    if (pBot->GetTeam() == 1 && pBot->GetTargetBot()->ID() != pBot->GetGivenTarget()->ID())
+    if (pBot->GetTeam() == 1 && pBot->GetTargetBot()->ID() != pBot->GetGivenTarget()->ID() && pBot->GetDestination() != pBot->Pos())
     {
         Desirability = 1.0;
     }
