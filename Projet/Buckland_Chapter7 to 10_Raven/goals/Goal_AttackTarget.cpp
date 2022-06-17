@@ -2,6 +2,7 @@
 #include "Goal_SeekToPosition.h"
 #include "Goal_HuntTarget.h"
 #include "Goal_DodgeSideToSide.h"
+#include "Goal_Flee.h"
 #include "../Raven_Bot.h"
 
 
@@ -34,7 +35,11 @@ void Goal_AttackTarget::Activate()
   {
     //if the bot has space to strafe then do so
     Vector2D dummy;
-    if (m_pOwner->canStepLeft(dummy) || m_pOwner->canStepRight(dummy))
+    if (m_pOwner->Health() < 50)
+    {
+      AddSubgoal(new Goal_Flee(m_pOwner, m_pOwner->GetTargetBot()->Pos()));
+    }
+    else if (m_pOwner->canStepLeft(dummy) || m_pOwner->canStepRight(dummy))
     {
       AddSubgoal(new Goal_DodgeSideToSide(m_pOwner));
     }

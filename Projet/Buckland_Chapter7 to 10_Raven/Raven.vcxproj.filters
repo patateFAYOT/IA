@@ -277,6 +277,9 @@
     <ClCompile Include="CNeuralNet.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="goals\Goal_Flee.cpp">
+      <Filter>AI\goals\atomic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Raven_Bot.h">
@@ -623,6 +626,9 @@
     </ClInclude>
     <ClInclude Include="CNeuralNet.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="goals\Goal_Flee.h">
+      <Filter>AI\goals\atomic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
