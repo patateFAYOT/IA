@@ -169,8 +169,12 @@ void Raven_Bot::Update()
   }
   else
   {
-      //examine all the opponents in the bots sensory memory and select one
-      //to be the current target
+      //update sensory memory and target system as if the human were a bot
+      //this will allow the data to be sent (a target system for the human is too complex to implement)
+      if (m_pVisionUpdateRegulator->isReady())
+      {
+          m_pSensoryMem->UpdateVision();
+      }
       if (m_pTargetSelectionRegulator->isReady())
       {
           m_pTargSys->Update();
