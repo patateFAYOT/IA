@@ -75,445 +75,872 @@ Creating a shotgun
 Creating a shotgun
 Creating a rocket_launcher
 maps/Raven_DM1.map loaded okay
-Adding a rocket 404 at pos  75.2482 363.788
-Adding a shotgun shell 406 at pos  357.422 317.671
-Adding a shotgun shell 407 at pos  357.422 317.671
-Adding a shotgun shell 408 at pos  357.422 317.671
-Adding a shotgun shell 409 at pos  357.422 317.671
-Adding a shotgun shell 410 at pos  357.422 317.671
-Adding a shotgun shell 411 at pos  357.422 317.671
-Adding a shotgun shell 412 at pos  357.422 317.671
-Adding a shotgun shell 413 at pos  357.422 317.671
-Adding a shotgun shell 414 at pos  357.422 317.671
-Adding a shotgun shell 415 at pos  357.422 317.671
-Player Possesses bot 401
-Adding a shotgun shell 417 at pos  382.932 289.802
-Adding a shotgun shell 418 at pos  382.932 289.802
-Adding a shotgun shell 419 at pos  382.932 289.802
-Adding a shotgun shell 420 at pos  382.932 289.802
-Adding a shotgun shell 421 at pos  382.932 289.802
-Adding a shotgun shell 422 at pos  382.932 289.802
-Adding a shotgun shell 423 at pos  382.932 289.802
-Adding a shotgun shell 424 at pos  382.932 289.802
-Adding a shotgun shell 425 at pos  382.932 289.802
-Adding a shotgun shell 426 at pos  382.932 289.802
-Adding someone to team 1
-Adding someone to team 1
-Adding a shotgun shell 429 at pos  382.932 289.802
-Adding a shotgun shell 430 at pos  382.932 289.802
-Adding a shotgun shell 431 at pos  382.932 289.802
-Adding a shotgun shell 432 at pos  382.932 289.802
-Adding a shotgun shell 433 at pos  382.932 289.802
-Adding a shotgun shell 434 at pos  382.932 289.802
-Adding a shotgun shell 435 at pos  382.932 289.802
-Adding a shotgun shell 436 at pos  382.932 289.802
-Adding a shotgun shell 437 at pos  382.932 289.802
-Adding a shotgun shell 438 at pos  382.932 289.802
-Adding a shotgun shell 440 at pos  364.285 255.937
-Adding a shotgun shell 441 at pos  364.285 255.937
-Adding a shotgun shell 442 at pos  364.285 255.937
-Adding a shotgun shell 443 at pos  364.285 255.937
-Adding a shotgun shell 444 at pos  364.285 255.937
-Adding a shotgun shell 445 at pos  364.285 255.937
-Adding a shotgun shell 446 at pos  364.285 255.937
-Adding a shotgun shell 447 at pos  364.285 255.937
-Adding a shotgun shell 448 at pos  364.285 255.937
-Adding a shotgun shell 449 at pos  364.285 255.937
-Adding a shotgun shell 451 at pos  331.026 224.231
-Adding a shotgun shell 452 at pos  331.026 224.231
-Adding a shotgun shell 453 at pos  331.026 224.231
-Adding a shotgun shell 454 at pos  331.026 224.231
-Adding a shotgun shell 455 at pos  331.026 224.231
-Adding a shotgun shell 456 at pos  331.026 224.231
-Adding a shotgun shell 457 at pos  331.026 224.231
-Adding a shotgun shell 458 at pos  331.026 224.231
-Adding a shotgun shell 459 at pos  331.026 224.231
-Adding a shotgun shell 460 at pos  331.026 224.231
-Adding a shotgun shell 462 at pos  297.836 220.122
-Adding a shotgun shell 463 at pos  297.836 220.122
-Adding a shotgun shell 464 at pos  297.836 220.122
-Adding a shotgun shell 465 at pos  297.836 220.122
-Adding a shotgun shell 466 at pos  297.836 220.122
-Adding a shotgun shell 467 at pos  297.836 220.122
-Adding a shotgun shell 468 at pos  297.836 220.122
-Adding a shotgun shell 469 at pos  297.836 220.122
-Adding a shotgun shell 470 at pos  297.836 220.122
-Adding a shotgun shell 471 at pos  297.836 220.122
-Adding a shotgun shell 473 at pos  264.645 194.559
-Adding a shotgun shell 474 at pos  264.645 194.559
-Adding a shotgun shell 475 at pos  264.645 194.559
-Adding a shotgun shell 476 at pos  264.645 194.559
-Adding a shotgun shell 477 at pos  264.645 194.559
-Adding a shotgun shell 478 at pos  264.645 194.559
-Adding a shotgun shell 479 at pos  264.645 194.559
-Adding a shotgun shell 480 at pos  264.645 194.559
-Adding a shotgun shell 481 at pos  264.645 194.559
-Adding a shotgun shell 482 at pos  264.645 194.559
-Adding a rail gun slug484 at pos  240.799 179.406
-Adding a bolt 486 at pos  256.384 61.1343
-Adding a bolt 488 at pos  249.444 55.9372
-Adding a shotgun shell 490 at pos  248.842 53.0089
-Adding a shotgun shell 491 at pos  248.842 53.0089
-Adding a shotgun shell 492 at pos  248.842 53.0089
-Adding a shotgun shell 493 at pos  248.842 53.0089
-Adding a shotgun shell 494 at pos  248.842 53.0089
-Adding a shotgun shell 495 at pos  248.842 53.0089
-Adding a shotgun shell 496 at pos  248.842 53.0089
-Adding a shotgun shell 497 at pos  248.842 53.0089
-Adding a shotgun shell 498 at pos  248.842 53.0089
-Adding a shotgun shell 499 at pos  248.842 53.0089
+Adding bot with ID 401
+Adding bot with ID 402
+Adding bot with ID 403
+Adding a rocket 404 at pos  78.68 366.171
+Player Possesses bot 402
 BOT 401 IS STUCK!!
-Adding a rail gun slug501 at pos  189.443 171.984
-Adding a shotgun shell 503 at pos  249.715 41.1553
-Adding a shotgun shell 504 at pos  249.715 41.1553
-Adding a shotgun shell 505 at pos  249.715 41.1553
-Adding a shotgun shell 506 at pos  249.715 41.1553
-Adding a shotgun shell 507 at pos  249.715 41.1553
-Adding a shotgun shell 508 at pos  249.715 41.1553
-Adding a shotgun shell 509 at pos  249.715 41.1553
-Adding a shotgun shell 510 at pos  249.715 41.1553
-Adding a shotgun shell 511 at pos  249.715 41.1553
-Adding a shotgun shell 512 at pos  249.715 41.1553
-Adding a bolt 514 at pos  231.398 167.18
-Adding a bolt 516 at pos  225.067 174.599
-Adding a bolt 518 at pos  234.92 168.579
-Adding a bolt 520 at pos  213.894 163.066
-Adding a shotgun shell 522 at pos  200.14 46.5247
-Adding a shotgun shell 523 at pos  200.14 46.5247
-Adding a shotgun shell 524 at pos  200.14 46.5247
-Adding a shotgun shell 525 at pos  200.14 46.5247
-Adding a shotgun shell 526 at pos  200.14 46.5247
-Adding a shotgun shell 527 at pos  200.14 46.5247
-Adding a shotgun shell 528 at pos  200.14 46.5247
-Adding a shotgun shell 529 at pos  200.14 46.5247
-Adding a shotgun shell 530 at pos  200.14 46.5247
-Adding a shotgun shell 531 at pos  200.14 46.5247
-Adding a bolt 533 at pos  235.788 192.878
-Adding a rocket 535 at pos  183.244 49.7658
-Adding a bolt 537 at pos  185.649 224.685
-Adding a bolt 539 at pos  231.993 204.631
-Adding a bolt 541 at pos  242.552 238.237
-Adding a bolt 543 at pos  188.632 219.203
-Adding a bolt 545 at pos  237.12 247.742
-Adding a bolt 547 at pos  189.358 230.167
-Adding a bolt 549 at pos  231.276 256.544
-Adding a bolt 551 at pos  189.668 240.761
-Adding a bolt 553 at pos  190.33 249.54
-Adding a bolt 555 at pos  244.26 260.057
-Adding a bolt 557 at pos  199.79 244.956
-Adding a shotgun shell 559 at pos  237.114 186.832
-Adding a shotgun shell 560 at pos  237.114 186.832
-Adding a shotgun shell 561 at pos  237.114 186.832
-Adding a shotgun shell 562 at pos  237.114 186.832
-Adding a shotgun shell 563 at pos  237.114 186.832
-Adding a shotgun shell 564 at pos  237.114 186.832
-Adding a shotgun shell 565 at pos  237.114 186.832
-Adding a shotgun shell 566 at pos  237.114 186.832
-Adding a shotgun shell 567 at pos  237.114 186.832
-Adding a shotgun shell 568 at pos  237.114 186.832
-Adding a bolt 570 at pos  255.21 260.032
-Adding a bolt 572 at pos  209.89 242.258
-Adding a bolt 574 at pos  270.344 265.833
-Adding a bolt 576 at pos  228.804 240.624
-Adding a shotgun shell 578 at pos  260.329 210.286
-Adding a shotgun shell 579 at pos  260.329 210.286
-Adding a shotgun shell 580 at pos  260.329 210.286
-Adding a shotgun shell 581 at pos  260.329 210.286
-Adding a shotgun shell 582 at pos  260.329 210.286
-Adding a shotgun shell 583 at pos  260.329 210.286
-Adding a shotgun shell 584 at pos  260.329 210.286
-Adding a shotgun shell 585 at pos  260.329 210.286
-Adding a shotgun shell 586 at pos  260.329 210.286
-Adding a shotgun shell 587 at pos  260.329 210.286
-Adding a bolt 589 at pos  240.799 240.271
-Adding a bolt 591 at pos  288.269 279.55
-Adding a bolt 593 at pos  249.829 244.953
-Adding a bolt 595 at pos  296.278 287.085
-Adding a bolt 597 at pos  258.646 251.529
-Adding a bolt 599 at pos  304.28 294.632
-Adding a shotgun shell 601 at pos  283.362 233.356
-Adding a shotgun shell 602 at pos  283.362 233.356
-Adding a shotgun shell 603 at pos  283.362 233.356
-Adding a shotgun shell 604 at pos  283.362 233.356
-Adding a shotgun shell 605 at pos  283.362 233.356
-Adding a shotgun shell 606 at pos  283.362 233.356
-Adding a shotgun shell 607 at pos  283.362 233.356
-Adding a shotgun shell 608 at pos  283.362 233.356
-Adding a shotgun shell 609 at pos  283.362 233.356
-Adding a shotgun shell 610 at pos  283.362 233.356
-Adding a bolt 612 at pos  267.168 258.458
-Adding a bolt 614 at pos  312.118 302.35
-Adding a bolt 616 at pos  275.17 266.005
-Adding a bolt 618 at pos  319.947 310.077
-Adding a bolt 620 at pos  283.17 273.555
-Adding a shotgun shell 622 at pos  303.596 256.679
-Adding a shotgun shell 623 at pos  303.596 256.679
-Adding a shotgun shell 624 at pos  303.596 256.679
-Adding a shotgun shell 625 at pos  303.596 256.679
-Adding a shotgun shell 626 at pos  303.596 256.679
-Adding a shotgun shell 627 at pos  303.596 256.679
-Adding a shotgun shell 628 at pos  303.596 256.679
-Adding a shotgun shell 629 at pos  303.596 256.679
-Adding a shotgun shell 630 at pos  303.596 256.679
-Adding a shotgun shell 631 at pos  303.596 256.679
-Adding a bolt 633 at pos  325.687 318.381
-Adding a bolt 635 at pos  284.945 278.754
-Adding a bolt 637 at pos  315.158 319.326
-Adding a bolt 639 at pos  274.405 279.515
-Adding a bolt 641 at pos  304.188 319.625
-Adding a bolt 643 at pos  263.433 279.737
-Adding a shotgun shell 645 at pos  270.44 259.694
-Adding a shotgun shell 646 at pos  270.44 259.694
-Adding a shotgun shell 647 at pos  270.44 259.694
-Adding a shotgun shell 648 at pos  270.44 259.694
-Adding a shotgun shell 649 at pos  270.44 259.694
-Adding a shotgun shell 650 at pos  270.44 259.694
-Adding a shotgun shell 651 at pos  270.44 259.694
-Adding a shotgun shell 652 at pos  270.44 259.694
-Adding a shotgun shell 653 at pos  270.44 259.694
-Adding a shotgun shell 654 at pos  270.44 259.694
-Adding a bolt 656 at pos  292.19 319.846
-Adding a bolt 658 at pos  251.434 279.887
-Adding a shotgun shell 660 at pos  355.979 319.541
-Adding a shotgun shell 661 at pos  355.979 319.541
-Adding a shotgun shell 662 at pos  355.979 319.541
-Adding a shotgun shell 663 at pos  355.979 319.541
-Adding a shotgun shell 664 at pos  355.979 319.541
-Adding a shotgun shell 665 at pos  355.979 319.541
-Adding a shotgun shell 666 at pos  355.979 319.541
-Adding a shotgun shell 667 at pos  355.979 319.541
-Adding a shotgun shell 668 at pos  355.979 319.541
-Adding a shotgun shell 669 at pos  355.979 319.541
-Adding a bolt 671 at pos  246.136 277.639
-Adding a bolt 673 at pos  280.19 319.929
-Adding a bolt 675 at pos  269.59 319.967
-Adding a bolt 677 at pos  255.591 319.988
-Adding a bolt 679 at pos  244.591 319.993
-Adding a bolt 681 at pos  233.978 319.997
-Adding a rail gun slug683 at pos  230.989 319.997
-Adding a bolt 685 at pos  250.17 230.922
-Adding a shotgun shell 687 at pos  211.721 276.218
-Adding a shotgun shell 688 at pos  211.721 276.218
-Adding a shotgun shell 689 at pos  211.721 276.218
-Adding a shotgun shell 690 at pos  211.721 276.218
-Adding a shotgun shell 691 at pos  211.721 276.218
-Adding a shotgun shell 692 at pos  211.721 276.218
-Adding a shotgun shell 693 at pos  211.721 276.218
-Adding a shotgun shell 694 at pos  211.721 276.218
-Adding a shotgun shell 695 at pos  211.721 276.218
-Adding a shotgun shell 696 at pos  211.721 276.218
-Adding a bolt 698 at pos  250.084 220.321
-Adding a rail gun slug700 at pos  198.991 320
-Adding a bolt 702 at pos  250.039 209.322
-Adding a bolt 704 at pos  250.02 198.322
-Adding a shotgun shell 706 at pos  189.268 300.379
-Adding a shotgun shell 707 at pos  189.268 300.379
-Adding a shotgun shell 708 at pos  189.268 300.379
-Adding a shotgun shell 709 at pos  189.268 300.379
-Adding a shotgun shell 710 at pos  189.268 300.379
-Adding a shotgun shell 711 at pos  189.268 300.379
-Adding a shotgun shell 712 at pos  189.268 300.379
-Adding a shotgun shell 713 at pos  189.268 300.379
-Adding a shotgun shell 714 at pos  189.268 300.379
-Adding a shotgun shell 715 at pos  189.268 300.379
-Adding a rocket 717 at pos  186.818 302.503
-Adding a bolt 719 at pos  250.008 187.522
-Adding a rail gun slug721 at pos  171.097 329.572
-Adding a bolt 723 at pos  255.98 178.702
-Adding a rocket 725 at pos  171.831 317.994
-Adding a bolt 727 at pos  262.578 169.9
-Adding a rail gun slug729 at pos  146.79 351.776
-Adding a rocket 731 at pos  155.637 334.318
-Adding a rocket 733 at pos  139.908 349.911
-Adding a rail gun slug735 at pos  120.58 373.401
-Adding a bolt 737 at pos  50.2972 358.071
-Adding a bolt 739 at pos  82.8992 376.687
-Adding a bolt 741 at pos  44.1735 339.03
-Adding a bolt 743 at pos  72.3539 374.556
-Adding a shotgun shell 745 at pos  86.5013 357.577
-Adding a shotgun shell 746 at pos  86.5013 357.577
-Adding a shotgun shell 747 at pos  86.5013 357.577
-Adding a shotgun shell 748 at pos  86.5013 357.577
-Adding a shotgun shell 749 at pos  86.5013 357.577
-Adding a shotgun shell 750 at pos  86.5013 357.577
-Adding a shotgun shell 751 at pos  86.5013 357.577
-Adding a shotgun shell 752 at pos  86.5013 357.577
-Adding a shotgun shell 753 at pos  86.5013 357.577
-Adding a shotgun shell 754 at pos  86.5013 357.577
-Adding a bolt 756 at pos  37.6032 330.208
-Adding a bolt 758 at pos  66.0029 370.621
-Adding a bolt 760 at pos  33.4229 320.783
-BOT 402 IS STUCK!!
-Adding a bolt 763 at pos  64.0178 367.767
+la taille du training set 1
 BOT 403 IS STUCK!!
-Adding a bolt 765 at pos  33.0932 318.814
-Adding a shotgun shell 767 at pos  80.5404 353.015
-Adding a shotgun shell 768 at pos  80.5404 353.015
-Adding a shotgun shell 769 at pos  80.5404 353.015
-Adding a shotgun shell 770 at pos  80.5404 353.015
-Adding a shotgun shell 771 at pos  80.5404 353.015
-Adding a shotgun shell 772 at pos  80.5404 353.015
-Adding a shotgun shell 773 at pos  80.5404 353.015
-Adding a shotgun shell 774 at pos  80.5404 353.015
-Adding a shotgun shell 775 at pos  80.5404 353.015
-Adding a shotgun shell 776 at pos  80.5404 353.015
-Adding a bolt 778 at pos  44.3106 288.115
-Adding a bolt 780 at pos  42 345.231
-Adding a bolt 783 at pos  61.9501 268.043
-Adding a bolt 785 at pos  24.6214 327.552
-Adding a rail gun slug787 at pos  60.1595 257.326
-Adding a bolt 789 at pos  23.8576 328.994
-Adding a shotgun shell 791 at pos  37.4553 346.143
-Adding a shotgun shell 792 at pos  37.4553 346.143
-Adding a shotgun shell 793 at pos  37.4553 346.143
-Adding a shotgun shell 794 at pos  37.4553 346.143
-Adding a shotgun shell 795 at pos  37.4553 346.143
-Adding a shotgun shell 796 at pos  37.4553 346.143
-Adding a shotgun shell 797 at pos  37.4553 346.143
-Adding a shotgun shell 798 at pos  37.4553 346.143
-Adding a shotgun shell 799 at pos  37.4553 346.143
-Adding a shotgun shell 800 at pos  37.4553 346.143
-Adding a rocket 802 at pos  35.5859 323.516
-Adding a rail gun slug804 at pos  35.5372 225.392
-Adding a rocket 806 at pos  34.0284 344.498
-Adding someone to team 1
-Adding a rocket 808 at pos  39.8112 325.942
-Adding a rocket 810 at pos  28.6801 345.643
-Adding a rail gun slug812 at pos  31.3997 201.063
-Adding a shotgun shell 814 at pos  450.284 175.613
-Adding a shotgun shell 815 at pos  450.284 175.613
-Adding a shotgun shell 816 at pos  450.284 175.613
-Adding a shotgun shell 817 at pos  450.284 175.613
-Adding a shotgun shell 818 at pos  450.284 175.613
-Adding a shotgun shell 819 at pos  450.284 175.613
-Adding a shotgun shell 820 at pos  450.284 175.613
-Adding a shotgun shell 821 at pos  450.284 175.613
-Adding a shotgun shell 822 at pos  450.284 175.613
-Adding a shotgun shell 823 at pos  450.284 175.613
-Adding a bolt 825 at pos  215.116 164.778
-Adding a bolt 827 at pos  212.784 154.197
-Adding a shotgun shell 829 at pos  430.341 146.134
-Adding a shotgun shell 830 at pos  430.341 146.134
-Adding a shotgun shell 831 at pos  430.341 146.134
-Adding a shotgun shell 832 at pos  430.341 146.134
-Adding a shotgun shell 833 at pos  430.341 146.134
-Adding a shotgun shell 834 at pos  430.341 146.134
-Adding a shotgun shell 835 at pos  430.341 146.134
-Adding a shotgun shell 836 at pos  430.341 146.134
-Adding a shotgun shell 837 at pos  430.341 146.134
-Adding a shotgun shell 838 at pos  430.341 146.134
-Adding a bolt 840 at pos  211.223 143.333
-Adding a bolt 842 at pos  196.678 42.1524
-Adding a bolt 844 at pos  207.13 40.9046
-Adding a rail gun slug846 at pos  101.26 130.888
-Adding a rail gun slug848 at pos  129.148 116.981
-Adding a rocket 850 at pos  152.499 305.823
-Adding a rocket 852 at pos  148.043 321.984
-Adding a bolt 854 at pos  275.603 153.193
-Adding a rocket 856 at pos  277.547 46.6227
-Adding a bolt 858 at pos  278.91 48.0861
-Adding a rocket 860 at pos  152.642 283.837
-Adding a bolt 862 at pos  283.713 145.762
-Adding a rocket 864 at pos  149.561 300.446
-Adding a bolt 866 at pos  287.255 54.7347
-Adding a bolt 868 at pos  291.312 138.372
-Adding a bolt 870 at pos  294.733 62.3498
-Adding a rocket 872 at pos  153.412 261.967
-Adding a bolt 874 at pos  299.156 130.661
-Adding a rocket 876 at pos  149.893 278.451
-Adding a bolt 878 at pos  301.929 70.669
-Adding a bolt 880 at pos  307.694 122.229
-Adding a bolt 882 at pos  309.079 78.492
-Adding a bolt 884 at pos  315.486 114.465
-Adding a rocket 886 at pos  159.215 263.152
-Adding a bolt 888 at pos  316.747 86.3753
-Adding a bolt 890 at pos  323.106 87.6292
-Adding a bolt 892 at pos  327.579 109.496
-Adding a bolt 894 at pos  328.175 94.011
-Adding a bolt 896 at pos  335.512 115.961
-Adding a bolt 898 at pos  334.859 101.678
-Adding a bolt 900 at pos  343.102 123.692
-Adding a bolt 902 at pos  348.544 133.242
-Adding a bolt 904 at pos  342.502 110.925
-Adding a bolt 906 at pos  356.238 139.483
-Adding a bolt 908 at pos  352.221 116.851
-Adding a bolt 910 at pos  366.327 140.099
-Adding a bolt 912 at pos  362.504 116.805
-Adding a rail gun slug914 at pos  265.998 60.072
-Adding a bolt 916 at pos  374.817 133.787
-Adding a bolt 918 at pos  371.923 110.31
-Adding a bolt 920 at pos  379.903 132.471
-Adding a bolt 922 at pos  383.359 110.582
-Adding a bolt 924 at pos  393.885 107.082
-Adding a bolt 926 at pos  384.226 126.6
-Adding a rail gun slug928 at pos  298.598 60.0081
-Adding a bolt 930 at pos  403.175 99.511
-Adding a bolt 932 at pos  392.545 117.957
-Adding a bolt 934 at pos  411.51 90.8794
-Adding a bolt 936 at pos  400.909 109.353
-Adding a bolt 938 at pos  420.487 82.9281
-Adding a bolt 940 at pos  326.263 76.3682
-Adding a bolt 942 at pos  409.037 101.073
-Adding a bolt 944 at pos  429.515 75.0307
-Adding a bolt 946 at pos  338.086 78.2046
-Adding a bolt 948 at pos  417.498 92.5674
-Adding a shotgun shell 950 at pos  424.642 58.3787
-Adding a shotgun shell 951 at pos  424.642 58.3787
-Adding a shotgun shell 952 at pos  424.642 58.3787
-Adding a shotgun shell 953 at pos  424.642 58.3787
-Adding a shotgun shell 954 at pos  424.642 58.3787
-Adding a shotgun shell 955 at pos  424.642 58.3787
-Adding a shotgun shell 956 at pos  424.642 58.3787
-Adding a shotgun shell 957 at pos  424.642 58.3787
-Adding a shotgun shell 958 at pos  424.642 58.3787
-Adding a shotgun shell 959 at pos  424.642 58.3787
-Adding someone to team 1
-Adding a bolt 961 at pos  344.31 66.7751
-Adding a bolt 963 at pos  441.42 94.4739
-Adding a bolt 965 at pos  339.77 77.8511
-Adding a bolt 967 at pos  452.591 90.2007
-Adding a rail gun slug969 at pos  339.509 85.6703
-Adding someone to team 1
-Adding a bolt 971 at pos  462.589 86.9051
-Adding someone to team 1
-BOT 782 IS STUCK!!
-Adding a bolt 974 at pos  85.2945 379.05
-Adding a rail gun slug977 at pos  281.763 239.419
-Adding a shotgun shell 979 at pos  444.019 340.84
-Adding a shotgun shell 980 at pos  444.019 340.84
-Adding a shotgun shell 981 at pos  444.019 340.84
-Adding a shotgun shell 982 at pos  444.019 340.84
-Adding a shotgun shell 983 at pos  444.019 340.84
-Adding a shotgun shell 984 at pos  444.019 340.84
-Adding a shotgun shell 985 at pos  444.019 340.84
-Adding a shotgun shell 986 at pos  444.019 340.84
-Adding a shotgun shell 987 at pos  444.019 340.84
-Adding a shotgun shell 988 at pos  444.019 340.84
-Adding a shotgun shell 990 at pos  430.38 306.251
-Adding a shotgun shell 991 at pos  430.38 306.251
-Adding a shotgun shell 992 at pos  430.38 306.251
-Adding a shotgun shell 993 at pos  430.38 306.251
-Adding a shotgun shell 994 at pos  430.38 306.251
-Adding a shotgun shell 995 at pos  430.38 306.251
-Adding a shotgun shell 996 at pos  430.38 306.251
-Adding a shotgun shell 997 at pos  430.38 306.251
-Adding a shotgun shell 998 at pos  430.38 306.251
-Adding a shotgun shell 999 at pos  430.38 306.251
-Adding a rail gun slug
-1001 at pos  219.855 245.891
-Adding a rocket 1003 at pos  289.182 292.338
-Adding a rocket 1005 at pos  310.951 282.798
-Adding a bolt 1007 at pos  371.603 257.065
-Adding a rocket 1009 at pos  392.058 262.776
-Adding a rocket 1011 at pos  288.1 282.029
-Adding a bolt 1013 at pos  369.082 247.06
-Adding a rocket 1015 at pos  309.293 272.379
-Adding a bolt 1017 at pos  365.307 236.772
-Adding a rocket 1019 at pos  385.802 272.789
-Adding a rocket 1021 at pos  293.768 301.056
-Adding a bolt 1023 at pos  361.165 226.583
-Adding a rocket 1025 at pos  305.968 260.869
-Adding a rocket 1027 at pos  283.989 318.495
+la taille du training set 2
+Adding a bolt 406 at pos  138.542 51.9531
+la taille du training set 3
+la taille du training set 4
+la taille du training set 5
+la taille du training set 6
+Adding a bolt 408 at pos  351.618 310.79
+la taille du training set 7
+la taille du training set 8
+la taille du training set 9
+la taille du training set 10
+Adding a rocket 410 at pos  61.5776 350.351
+la taille du training set 11
+la taille du training set 12
+la taille du training set 13
+la taille du training set 14
+Adding a bolt 412 at pos  142.494 57.5927
+la taille du training set 15
+la taille du training set 16
+la taille du training set 17
+la taille du training set 18
+la taille du training set 19
+la taille du training set 20
+Adding a bolt 414 at pos  350.884 309.914
+la taille du training set 21
+la taille du training set 22
+la taille du training set 23
+la taille du training set 24
+la taille du training set 25
+la taille du training set 26
+la taille du training set 27
+la taille du training set 28
+la taille du training set 29
+la taille du training set 30
+la taille du training set 31
+la taille du training set 32
+la taille du training set 33
+la taille du training set 34
+la taille du training set 35
+la taille du training set 36
+la taille du training set 37
+la taille du training set 38
+la taille du training set 39
+la taille du training set 40
+la taille du training set 41
+la taille du training set 42
+la taille du training set 43
+la taille du training set 44
+la taille du training set 45
+la taille du training set 46
+la taille du training set 47
+la taille du training set 48
+la taille du training set 49
+la taille du training set 50
+la taille du training set 51
+la taille du training set 52
+la taille du training set 53
+la taille du training set 54
+la taille du training set 55
+la taille du training set 56
+la taille du training set 57
+la taille du training set 58
+la taille du training set 59
+la taille du training set 60
+la taille du training set 61
+la taille du training set 62
+la taille du training set 63
+la taille du training set 64
+la taille du training set 65
+Adding a bolt 416 at pos  321.613 301.275
+la taille du training set 66
+la taille du training set 67
+la taille du training set 68
+la taille du training set 69
+la taille du training set 70
+la taille du training set 71
+la taille du training set 72
+la taille du training set 73
+la taille du training set 74
+la taille du training set 75
+la taille du training set 76
+la taille du training set 77
+la taille du training set 78
+la taille du training set 79
+la taille du training set 80
+la taille du training set 81
+la taille du training set 82
+la taille du training set 83
+la taille du training set 84
+la taille du training set 85
+la taille du training set 86
+la taille du training set 87
+la taille du training set 88
+la taille du training set 89
+la taille du training set 90
+la taille du training set 91
+la taille du training set 92
+la taille du training set 93
+la taille du training set 94
+la taille du training set 95
+la taille du training set 96
+la taille du training set 97
+la taille du training set 98
+la taille du training set 99
+la taille du training set 100
+la taille du training set 101
+la taille du training set 102
+la taille du training set 103
+la taille du training set 104
+la taille du training set 105
+la taille du training set 106
+la taille du training set 107
+la taille du training set 108
+la taille du training set 109
+la taille du training set 110
+la taille du training set 111
+la taille du training set 112
+la taille du training set 113
+la taille du training set 114
+la taille du training set 115
+la taille du training set 116
+la taille du training set 117
+la taille du training set 118
+la taille du training set 119
+la taille du training set 120
+la taille du training set 121
+la taille du training set 122
+la taille du training set 123
+la taille du training set 124
+la taille du training set 125
+la taille du training set 126
+la taille du training set 127
+la taille du training set 128
+la taille du training set 129
+la taille du training set 130
+la taille du training set 131
+la taille du training set 132
+la taille du training set 133
+la taille du training set 134
+Adding a bolt 418 at pos  276.759 269.424
+la taille du training set 135
+la taille du training set 136
+Adding a rocket 420 at pos  182.539 77.0294
+la taille du training set 137
+la taille du training set 138
+la taille du training set 139
+la taille du training set 140
+la taille du training set 141
+la taille du training set 142
+la taille du training set 143
+la taille du training set 144
+la taille du training set 145
+Adding a bolt 422 at pos  273.235 259.276
+la taille du training set 146
+la taille du training set 147
+la taille du training set 148
+la taille du training set 149
+la taille du training set 150
+la taille du training set 151
+la taille du training set 152
+la taille du training set 153
+la taille du training set 154
+la taille du training set 155
+la taille du training set 156
+la taille du training set 157
+la taille du training set 158
+la taille du training set 159
+la taille du training set 160
+la taille du training set 161
+la taille du training set 162
+la taille du training set 163
+la taille du training set 164
+la taille du training set 165
+la taille du training set 166
+la taille du training set 167
+la taille du training set 168
+la taille du training set 169
+la taille du training set 170
+la taille du training set 171
+la taille du training set 172
+la taille du training set 173
+la taille du training set 174
+la taille du training set 175
+la taille du training set 176
+la taille du training set 177
+la taille du training set 178
+la taille du training set 179
+la taille du training set 180
+la taille du training set 181
+la taille du training set 182
+la taille du training set 183
+la taille du training set 184
+la taille du training set 185
+la taille du training set 186
+la taille du training set 187
+la taille du training set 188
+la taille du training set 189
+la taille du training set 190
+la taille du training set 191
+la taille du training set 192
+la taille du training set 193
+la taille du training set 194
+la taille du training set 195
+la taille du training set 196
+la taille du training set 197
+la taille du training set 198
+la taille du training set 199
+la taille du training set 200
+la taille du training set 201
+la taille du training set 202
+la taille du training set 203
+la taille du training set 204
+la taille du training set 205
+la taille du training set 206
+la taille du training set 207
+la taille du training set 208
+la taille du training set 209
+la taille du training set 210
+la taille du training set 211
+la taille du training set 212
+la taille du training set 213
+la taille du training set 214
+la taille du training set 215
+la taille du training set 216
+la taille du training set 217
+la taille du training set 218
+la taille du training set 219
+la taille du training set 220
+la taille du training set 221
+la taille du training set 222
+la taille du training set 223
+la taille du training set 224
+la taille du training set 225
+la taille du training set 226
+la taille du training set 227
+la taille du training set 228
+la taille du training set 229
+la taille du training set 230
+la taille du training set 231
+la taille du training set 232
+la taille du training set 233
+la taille du training set 234
+la taille du training set 235
+la taille du training set 236
+la taille du training set 237
+la taille du training set 238
+la taille du training set 239
+Adding a bolt 424 at pos  266.828 191.912
+la taille du training set 240
+la taille du training set 241
+la taille du training set 242
+la taille du training set 243
+la taille du training set 244
+la taille du training set 245
+la taille du training set 246
+la taille du training set 247
+la taille du training set 248
+la taille du training set 249
+la taille du training set 250
+la taille du training set 251
+Adding a bolt 426 at pos  268.611 180.098
+la taille du training set 252
+la taille du training set 253
+la taille du training set 254
+la taille du training set 255
+la taille du training set 256
+la taille du training set 257
+la taille du training set 258
+la taille du training set 259
+la taille du training set 260
+Adding a rocket 428 at pos  300.352 60.0065
+la taille du training set 261
+la taille du training set 262
+la taille du training set 263
+la taille du training set 264
+la taille du training set 265
+la taille du training set 266
+la taille du training set 267
+la taille du training set 268
+Adding a bolt 430 at pos  271.399 164.142
+la taille du training set 269
+la taille du training set 270
+la taille du training set 271
+la taille du training set 272
+la taille du training set 273
+la taille du training set 274
+la taille du training set 275
+la taille du training set 276
+la taille du training set 277
+la taille du training set 278
+la taille du training set 279
+la taille du training set 280
+la taille du training set 281
+la taille du training set 282
+la taille du training set 283
+la taille du training set 284
+la taille du training set 285
+Adding a bolt 432 at pos  281.75 150.683
+la taille du training set 286
+la taille du training set 287
+la taille du training set 288
+la taille du training set 289
+la taille du training set 290
+la taille du training set 291
+la taille du training set 292
+la taille du training set 293
+la taille du training set 294
+Adding a bolt 434 at pos  327.514 76.3218
+la taille du training set 295
+la taille du training set 296
+la taille du training set 297
+la taille du training set 298
+la taille du training set 299
+la taille du training set 300
+la taille du training set 301
+la taille du training set 302
+Adding a bolt 436 at pos  284.009 140.35
+la taille du training set 303
+la taille du training set 304
+la taille du training set 305
+Adding a bolt 438 at pos  338.365 78.1062
+la taille du training set 306
+la taille du training set 307
+la taille du training set 308
+la taille du training set 309
+Adding a rail gun slug440 at pos  141.372 342.152
+la taille du training set 310
+la taille du training set 311
+la taille du training set 312
+la taille du training set 313
+la taille du training set 314
+la taille du training set 315
+la taille du training set 316
+la taille du training set 317
+Adding a bolt 442 at pos  349.9 79.1487
+la taille du training set 318
+la taille du training set 319
+la taille du training set 320
+la taille du training set 321
+la taille du training set 322
+la taille du training set 323
+la taille du training set 324
+la taille du training set 325
+la taille du training set 326
+la taille du training set 327
+la taille du training set 328
+la taille du training set 329
+la taille du training set 330
+la taille du training set 331
+la taille du training set 332
+la taille du training set 333
+la taille du training set 334
+la taille du training set 335
+la taille du training set 336
+la taille du training set 337
+Adding a rocket 444 at pos  139.548 344.295
+la taille du training set 338
+la taille du training set 339
+la taille du training set 340
+la taille du training set 341
+la taille du training set 342
+la taille du training set 343
+la taille du training set 344
+la taille du training set 345
+la taille du training set 346
+la taille du training set 347
+la taille du training set 348
+la taille du training set 349
+la taille du training set 350
+la taille du training set 351
+la taille du training set 352
+la taille du training set 353
+la taille du training set 354
+la taille du training set 355
+la taille du training set 356
+la taille du training set 357
+la taille du training set 358
+la taille du training set 359
+la taille du training set 360
+la taille du training set 361
+la taille du training set 362
+la taille du training set 363
+la taille du training set 364
+la taille du training set 365
+la taille du training set 366
+la taille du training set 367
+la taille du training set 368
+la taille du training set 369
+Adding a rail gun slug446 at pos  137.031 349.822
+la taille du training set 370
+la taille du training set 371
+la taille du training set 372
+la taille du training set 373
+la taille du training set 374
+la taille du training set 375
+la taille du training set 376
+la taille du training set 377
+la taille du training set 378
+la taille du training set 379
+la taille du training set 380
+la taille du training set 381
+la taille du training set 382
+la taille du training set 383
+la taille du training set 384
+la taille du training set 385
+la taille du training set 386
+la taille du training set 387
+la taille du training set 388
+la taille du training set 389
+la taille du training set 390
+la taille du training set 391
+la taille du training set 392
+la taille du training set 393
+la taille du training set 394
+la taille du training set 395
+la taille du training set 396
+la taille du training set 
+397
+la taille du training set 398
+la taille du training set 399
+la taille du training set 400
+la taille du training set 401
+Adding a rail gun slug448 at pos  137.712 352.26
+Adding a bolt 450 at pos  294.949 128.435
+la taille du training set 402
+la taille du training set 403
+la taille du training set 404
+la taille du training set 405
+la taille du training set 406
+la taille du training set 407
+la taille du training set 408
+la taille du training set 409
+la taille du training set 410
+la taille du training set 411
+la taille du training set 412
+la taille du training set 413
+la taille du training set 414
+Adding a bolt 452 at pos  294.955 127.801
+la taille du training set 415
+la taille du training set 416
+la taille du training set 417
+la taille du training set 418
+Adding a rocket 454 at pos  436.145 71.6313
+la taille du training set 419
+la taille du training set 420
+la taille du training set 421
+la taille du training set 422
+la taille du training set 423
+la taille du training set 424
+la taille du training set 425
+la taille du training set 426
+la taille du training set 427
+la taille du training set 428
+la taille du training set 429
+la taille du training set 430
+la taille du training set 431
+Adding a bolt 456 at pos  294.955 127.765
+la taille du training set 432
+la taille du training set 433
+la taille du training set 434
+Adding a rail gun slug458 at pos  138.105 353.437
+la taille du training set 435
+la taille du training set 436
+la taille du training set 437
+la taille du training set 438
+la taille du training set 439
+la taille du training set 440
+la taille du training set 441
+la taille du training set 442
+la taille du training set 443
+la taille du training set 444
+la taille du training set 445
+la taille du training set 446
+la taille du training set 447
+la taille du training set 448
+la taille du training set 449
+la taille du training set 450
+la taille du training set 451
+la taille du training set 452
+Adding a rocket 460 at pos  423.93 81.8617
+la taille du training set 453
+la taille du training set 454
+la taille du training set 455
+la taille du training set 456
+la taille du training set 457
+la taille du training set 458
+la taille du training set 459
+la taille du training set 460
+la taille du training set 461
+la taille du training set 462
+la taille du training set 463
+la taille du training set 464
+la taille du training set 465
+la taille du training set 466
+Adding a rail gun slug462 at pos  149.313 361.838
+la taille du training set 467
+la taille du training set 468
+la taille du training set 469
+la taille du training set 470
+la taille du training set 471
+la taille du training set 472
+la taille du training set 473
+la taille du training set 474
+la taille du training set 475
+la taille du training set 476
+la taille du training set 477
+la taille du training set 478
+Adding a bolt 464 at pos  281.987 145.371
+la taille du training set 479
+la taille du training set 480
+la taille du training set 481
+la taille du training set 482
+la taille du training set 483
+la taille du training set 484
+la taille du training set 485
+la taille du training set 486
+la taille du training set 487
+la taille du training set 488
+la taille du training set 489
+la taille du training set 490
+la taille du training set 491
+la taille du training set 492
+la taille du training set 493
+la taille du training set 494
+la taille du training set 495
+Adding a rail gun slug466 at pos  146.196 361.201
+la taille du training set 496
+la taille du training set 497
+la taille du training set 498
+la taille du training set 499
+la taille du training set 500
+Model is learning...
+Model is learning...
+Adding a bolt 468 at pos  268.852 161.305
+Adding a rail gun slug470 at pos  149.107 364.166
+Adding a bolt 472 at pos  248.691 189.663
+Adding a rail gun slug474 at pos  126.052 350.175
+Adding a bolt 476 at pos  240.491 204.555
+Adding a bolt 478 at pos  235.185 214.191
+Adding a bolt 480 at pos  228.915 225.578
+Adding a rail gun slug482 at pos  140.717 346.342
+Adding a bolt 484 at pos  222.644 236.966
+Adding a rocket 486 at pos  323.639 109.018
+Adding a bolt 488 at pos  215.892 249.23
+Adding a rail gun slug490 at pos  157.654 362.123
+Adding a rocket 492 at pos  315.921 102.686
+Adding a bolt 494 at pos  209.621 260.618
+Adding a rocket 496 at pos  320.316 105.037
+Adding a rail gun slug498 at pos  157.128 365.905
+Adding a rail gun slug500 at pos  128.284 357.586
+Adding a rail gun slug502 at pos  147.109 345.474
+Adding a shotgun shell 504 at pos  264.296 167.426
+Adding a shotgun shell 505 at pos  264.296 167.426
+Adding a shotgun shell 506 at pos  264.296 167.426
+Adding a shotgun shell 507 at pos  264.296 167.426
+Adding a shotgun shell 508 at pos  264.296 167.426
+Adding a shotgun shell 509 at pos  264.296 167.426
+Adding a shotgun shell 510 at pos  264.296 167.426
+Adding a shotgun shell 511 at pos  264.296 167.426
+Adding a shotgun shell 512 at pos  264.296 167.426
+Adding a shotgun shell 513 at pos  264.296 167.426
+Adding a bolt 515 at pos  210.779 218.839
+Adding a rail gun slug517 at pos  142.402 345.576
+Adding a bolt 519 at pos  224.613 216.686
+Adding a bolt 521 at pos  238.446 214.533
+Adding a shotgun shell 523 at pos  265.26 165.336
+Adding a shotgun shell 524 at pos  265.26 165.336
+Adding a shotgun shell 525 at pos  265.26 165.336
+Adding a shotgun shell 526 at pos  265.26 165.336
+Adding a shotgun shell 527 at pos  265.26 165.336
+Adding a shotgun shell 528 at pos  265.26 165.336
+Adding a shotgun shell 529 at pos  265.26 165.336
+Adding a shotgun shell 530 at pos  265.26 165.336
+Adding a shotgun shell 531 at pos  265.26 165.336
+Adding a shotgun shell 532 at pos  265.26 165.336
+BOT 402 IS STUCK!!
+Adding a bolt 534 at pos  249.315 212.842
+Adding a rail gun slug536 at pos  149.753 352.002
+Adding a rocket 538 at pos  146.384 349.849
+Model has finished learning!
+Adding a bolt 540 at pos  264.137 210.535
+Adding a rocket 542 at pos  152.985 358.948
+Adding a shotgun shell 544 at pos  265.158 164.454
+Adding a shotgun shell 545 at pos  265.158 164.454
+Adding a shotgun shell 546 at pos  265.158 164.454
+Adding a shotgun shell 547 at pos  265.158 164.454
+Adding a shotgun shell 548 at pos  265.158 164.454
+Adding a shotgun shell 549 at pos  265.158 164.454
+Adding a shotgun shell 550 at pos  265.158 164.454
+Adding a shotgun shell 551 at pos  265.158 164.454
+Adding a shotgun shell 552 at pos  265.158 164.454
+Adding a shotgun shell 553 at pos  265.158 164.454
+Adding a bolt 555 at pos  268.806 209.808
+Adding a rocket 557 at pos  143.407 351.725
+Adding a rocket 559 at pos  275.845 179.655
+Adding a bolt 561 at pos  135.162 362.323
+Adding a bolt 563 at pos  126.161 368.646
+Adding a bolt 565 at pos  123.443 378.092
+Adding a bolt 567 at pos  138.853 379.497
+Adding a rocket 569 at pos  149.45 379.773
+Adding learning bot with ID 571
+Adding a bolt 572 at pos  65.4235 379.81
+Adding a bolt 574 at pos  76.3981 379.896
+Adding a rocket 576 at pos  239.647 379.999
+Adding a shotgun shell 578 at pos  342.302 292.283
+Adding a shotgun shell 579 at pos  342.302 292.283
+Adding a shotgun shell 580 at pos  342.302 292.283
+Adding a shotgun shell 581 at pos  342.302 292.283
+Adding a shotgun shell 582 at pos  342.302 292.283
+Adding a shotgun shell 583 at pos  342.302 292.283
+Adding a shotgun shell 584 at pos  342.302 292.283
+Adding a shotgun shell 585 at pos  342.302 292.283
+Adding a shotgun shell 586 at pos  342.302 292.283
+Adding a shotgun shell 587 at pos  342.302 292.283
+Adding a shotgun shell 589 at pos  355.848 319.752
+Adding a shotgun shell 590 at pos  355.848 319.752
+Adding a shotgun shell 591 at pos  355.848 319.752
+Adding a shotgun shell 592 at pos  355.848 319.752
+Adding a shotgun shell 593 at pos  355.848 319.752
+Adding a shotgun shell 594 at pos  355.848 319.752
+Adding a shotgun shell 595 at pos  355.848 319.752
+Adding a shotgun shell 596 at pos  355.848 319.752
+Adding a shotgun shell 597 at pos  355.848 319.752
+Adding a shotgun shell 598 at pos  355.848 319.752
+Adding a rocket 600 at pos  257.162 346.682
+Adding a bolt 602 at pos  56.0399 343.542
+Adding a bolt 604 at pos  48.7879 338.215
+Adding a shotgun shell 606 at pos  361.023 325.256
+Adding a shotgun shell 607 at pos  361.023 325.256
+Adding a shotgun shell 608 at pos  361.023 325.256
+Adding a shotgun shell 609 at pos  361.023 325.256
+Adding a shotgun shell 610 at pos  361.023 325.256
+Adding a shotgun shell 611 at pos  361.023 325.256
+Adding a shotgun shell 612 at pos  361.023 325.256
+Adding a shotgun shell 613 at pos  361.023 325.256
+Adding a shotgun shell 614 at pos  361.023 325.256
+Adding a shotgun shell 615 at pos  361.023 325.256
+Adding a bolt 617 at pos  44.3648 334.548
+Adding a rocket 619 at pos  223.614 340.717
+Adding a shotgun shell 621 at pos  362.464 323.016
+Adding a shotgun shell 622 at pos  362.464 323.016
+Adding a shotgun shell 623 at pos  362.464 323.016
+Adding a shotgun shell 624 at pos  362.464 323.016
+Adding a shotgun shell 625 at pos  362.464 323.016
+Adding a shotgun shell 626 at pos  362.464 323.016
+Adding a shotgun shell 627 at pos  362.464 323.016
+Adding a shotgun shell 628 at pos  362.464 323.016
+Adding a shotgun shell 629 at pos  362.464 323.016
+Adding a shotgun shell 630 at pos  362.464 323.016
+Adding a rocket 632 at pos  363.131 326.959
+BOT 402 IS STUCK!!
+Adding a rocket 634 at pos  187.025 340.06
+Adding a rocket 636 at pos  357.915 316.256
+Adding a bolt 638 at pos  42.01 293.143
+Adding a rocket 640 at pos  165.425 340.013
+Adding a bolt 642 at pos  49.1467 283.066
+Adding a rocket 644 at pos  346.883 299.078
+Adding a bolt 646 at pos  56.3895 275.055
+Adding a rocket 648 at pos  144.425 340.003
+Adding a rocket 650 at pos  122.757 340.344
+Adding a rail gun slug652 at pos  49.7256 254.961
+Adding a bolt 654 at pos  49.7509 251.968
+Adding a bolt 656 at pos  49.8727 240.97
+Adding a bolt 658 at pos  49.9395 229.97
+Adding a bolt 660 at pos  54.6645 220.902
+Adding a bolt 662 at pos  87.753 220.005
+Adding a bolt 664 at pos  61.1704 212.033
+Adding a bolt 666 at pos  93.2123 207.113
+Adding a bolt 668 at pos  68.043 203.467
+Adding a bolt 670 at pos  77.606 193.243
+Adding a bolt 672 at pos  78.5996 187.244
+Adding a rocket 674 at pos  33.7852 317.987
+Adding a bolt 676 at pos  80.8608 184.506
+Adding a bolt 678 at pos  78.3123 165.685
+Adding a rocket 680 at pos  30.2559 278.657
+Adding a bolt 682 at pos  93.9772 190.83
+Adding a rail gun slug684 at pos  95.473 135.662
+Adding a bolt 686 at pos  27.1549 217.446
+Adding a bolt 688 at pos  24.2907 203.427
+Adding a bolt 690 at pos  28.6369 222.56
+Adding a bolt 692 at pos  26.0026 233.009
+Adding a bolt 694 at pos  26.8396 251.852
+Adding a bolt 696 at pos  25.4112 282.389
+Adding a bolt 698 at pos  26.5019 252.168
+Adding a bolt 700 at pos  28.1352 292.84
+Adding a bolt 702 at pos  28.9741 303.594
+Adding a bolt 704 at pos  26.4784 252.19
+Adding a bolt 706 at pos  29.7974 312.483
+Adding a bolt 708 at pos  36.0953 321.406
+Adding a rail gun slug710 at pos  225.341 40.0373
+Adding a bolt 712 at pos  40.9236 330.122
+Adding a shotgun shell 714 at pos  368.16 100.009
+Adding a shotgun shell 715 at pos  368.16 100.009
+Adding a shotgun shell 716 at pos  368.16 100.009
+Adding a shotgun shell 717 at pos  368.16 100.009
+Adding a shotgun shell 718 at pos  368.16 100.009
+Adding a shotgun shell 719 at pos  368.16 100.009
+Adding a shotgun shell 720 at pos  368.16 100.009
+Adding a shotgun shell 721 at pos  368.16 100.009
+Adding a shotgun shell 722 at pos  368.16 100.009
+Adding a shotgun shell 723 at pos  368.16 100.009
+Adding a rail gun slug725 at pos  255.941 40.0055
+Adding a shotgun shell 727 at pos  399.156 100.001
+Adding a shotgun shell 728 at pos  399.156 100.001
+Adding a shotgun shell 729 at pos  399.156 100.001
+Adding a shotgun shell 730 at pos  399.156 100.001
+Adding a shotgun shell 731 at pos  399.156 100.001
+Adding a shotgun shell 732 at pos  399.156 100.001
+Adding a shotgun shell 733 at pos  399.156 100.001
+Adding a shotgun shell 734 at pos  399.156 100.001
+Adding a shotgun shell 735 at pos  399.156 100.001
+Adding a shotgun shell 736 at pos  399.156 100.001
+Adding a shotgun shell 738 at pos  439.365 70.3732
+Adding a shotgun shell 739 at pos  439.365 70.3732
+Adding a shotgun shell 740 at pos  439.365 70.3732
+Adding a shotgun shell 741 at pos  439.365 70.3732
+Adding a shotgun shell 742 at pos  439.365 70.3732
+Adding a shotgun shell 743 at pos  439.365 70.3732
+Adding a shotgun shell 744 at pos  439.365 70.3732
+Adding a shotgun shell 745 at pos  439.365 70.3732
+Adding a shotgun shell 746 at pos  439.365 70.3732
+Adding a shotgun shell 747 at pos  439.365 70.3732
+Adding a rail gun slug749 at pos  319.544 70.1033
+Adding a bolt 751 at pos  30.4558 328.245
+Adding a bolt 753 at pos  30.2234 339.241
+Adding a shotgun shell 755 at pos  438.969 97.5182
+Adding a shotgun shell 756 at pos  438.969 97.5182
+Adding a shotgun shell 757 at pos  438.969 97.5182
+Adding a shotgun shell 758 at pos  438.969 97.5182
+Adding a shotgun shell 759 at pos  438.969 97.5182
+Adding a shotgun shell 760 at pos  438.969 97.5182
+Adding a shotgun shell 761 at pos  438.969 97.5182
+Adding a shotgun shell 762 at pos  438.969 97.5182
+Adding a shotgun shell 763 at pos  438.969 97.5182
+Adding a shotgun shell 764 at pos  438.969 97.5182
+Adding a rail gun slug766 at pos  320.509 97.4697
+Adding a rail gun slug768 at pos  321.877 79.56
+Adding a shotgun shell 770 at pos  415.433 101.161
+Adding a shotgun shell 771 at pos  415.433 101.161
+Adding a shotgun shell 772 at pos  415.433 101.161
+Adding a shotgun shell 773 at pos  415.433 101.161
+Adding a shotgun shell 774 at pos  415.433 101.161
+Adding a shotgun shell 775 at pos  415.433 101.161
+Adding a shotgun shell 776 at pos  415.433 101.161
+Adding a shotgun shell 777 at pos  415.433 101.161
+Adding a shotgun shell 778 at pos  415.433 101.161
+Adding a shotgun shell 779 at pos  415.433 101.161
+Adding a bolt 781 at pos  40.8994 355.18
+Adding a bolt 783 at pos  326.173 83.9892
+Adding a shotgun shell 785 at pos  368.599 97.0183
+Adding a shotgun shell 786 at pos  368.599 97.0183
+Adding a shotgun shell 787 at pos  368.599 97.0183
+Adding a shotgun shell 788 at pos  368.599 97.0183
+Adding a shotgun shell 789 at pos  368.599 97.0183
+Adding a shotgun shell 790 at pos  368.599 97.0183
+Adding a shotgun shell 791 at pos  368.599 97.0183
+Adding a shotgun shell 792 at pos  368.599 97.0183
+Adding a shotgun shell 793 at pos  368.599 97.0183
+Adding a shotgun shell 794 at pos  368.599 97.0183
+Adding a bolt 796 at pos  316.555 107.648
+Adding a bolt 798 at pos  313.749 97.225
+Adding a bolt 800 at pos  310.572 87.7613
+Adding a shotgun shell 802 at pos  364.583 72.5129
+Adding a shotgun shell 803 at pos  364.583 72.5129
+Adding a shotgun shell 804 at pos  364.583 72.5129
+Adding a shotgun shell 805 at pos  364.583 72.5129
+Adding a shotgun shell 806 at pos  364.583 72.5129
+Adding a shotgun shell 807 at pos  364.583 72.5129
+Adding a shotgun shell 808 at pos  364.583 72.5129
+Adding a shotgun shell 809 at pos  364.583 72.5129
+Adding a shotgun shell 810 at pos  364.583 72.5129
+Adding a shotgun shell 811 at pos  364.583 72.5129
+Adding a bolt 813 at pos  307.212 81.5599
+Adding a bolt 815 at pos  308.207 92.3918
+Adding a bolt 817 at pos  308.206 78.6925
+Adding a shotgun shell 819 at pos  367.675 106.782
+Adding a shotgun shell 820 at pos  367.675 106.782
+Adding a shotgun shell 821 at pos  367.675 106.782
+Adding a shotgun shell 822 at pos  367.675 106.782
+Adding a shotgun shell 823 at pos  367.675 106.782
+Adding a shotgun shell 824 at pos  367.675 106.782
+Adding a shotgun shell 825 at pos  367.675 106.782
+Adding a shotgun shell 826 at pos  367.675 106.782
+Adding a shotgun shell 827 at pos  367.675 106.782
+Adding a shotgun shell 828 at pos  367.675 106.782
+Adding a bolt 830 at pos  307.574 85.2033
+Adding a bolt 832 at pos  145.174 337.439
+Adding a rocket 834 at pos  150.475 288.456
+Adding a bolt 836 at pos  150.393 290.454
+Adding a bolt 838 at pos  149.691 324.864
+Adding a bolt 840 at pos  150.734 302.351
+Adding a shotgun shell 842 at pos  372.56 104.381
+Adding a shotgun shell 843 at pos  372.56 104.381
+Adding a shotgun shell 844 at pos  372.56 104.381
+Adding a shotgun shell 845 at pos  372.56 104.381
+Adding a shotgun shell 846 at pos  372.56 104.381
+Adding a shotgun shell 847 at pos  372.56 104.381
+Adding a shotgun shell 848 at pos  372.56 104.381
+Adding a shotgun shell 849 at pos  372.56 104.381
+Adding a shotgun shell 850 at pos  372.56 104.381
+Adding a shotgun shell 851 at pos  372.56 104.381
+Adding a bolt 853 at pos  309.52 107.632
+Adding a bolt 855 at pos  173.72 328.778
+Adding a bolt 857 at pos  189.697 327.934
+Adding a bolt 859 at pos  147.099 337.321
+Adding a bolt 861 at pos  201.681 327.3
+Adding a rocket 863 at pos  124.786 364.211
+Adding a rocket 865 at pos  132.05 363.439
+Adding a rail gun slug867 at pos  270.645 206.671
+Adding a shotgun shell 869 at pos  292.597 92.7845
+Adding a shotgun shell 870 at pos  292.597 92.7845
+Adding a shotgun shell 871 at pos  292.597 92.7845
+Adding a shotgun shell 872 at pos  292.597 92.7845
+Adding a shotgun shell 873 at pos  292.597 92.7845
+Adding a shotgun shell 874 at pos  292.597 92.7845
+Adding a shotgun shell 875 at pos  292.597 92.7845
+Adding a shotgun shell 876 at pos  292.597 92.7845
+Adding a shotgun shell 877 at pos  292.597 92.7845
+Adding a shotgun shell 878 at pos  292.597 92.7845
+Adding a rocket 880 at pos  150.48 355.645
+Adding a rocket 882 at pos  174.376 342.665
+Adding a rail gun slug884 at pos  272.584 183.954
+Adding a shotgun shell 886 at pos  291.096 89.9091
+Adding a shotgun shell 887 at pos  291.096 89.9091
+Adding a shotgun shell 888 at pos  291.096 89.9091
+Adding a shotgun shell 889 at pos  291.096 89.9091
+Adding a shotgun shell 890 at pos  291.096 89.9091
+Adding a shotgun shell 891 at pos  291.096 89.9091
+Adding a shotgun shell 892 at pos  291.096 89.9091
+Adding a shotgun shell 893 at pos  291.096 89.9091
+Adding a shotgun shell 894 at pos  291.096 89.9091
+Adding a shotgun shell 895 at pos  291.096 89.9091
+Adding a bolt 897 at pos  274.33 181.527
+Adding a bolt 899 at pos  278.03 175.683
+Adding a bolt 901 at pos  267.46 177.468
+Adding a shotgun shell 903 at pos  285.669 78.7237
+Adding a shotgun shell 904 at pos  285.669 78.7237
+Adding a shotgun shell 905 at pos  285.669 78.7237
+Adding a shotgun shell 906 at pos  285.669 78.7237
+Adding a shotgun shell 907 at pos  285.669 78.7237
+Adding a shotgun shell 908 at pos  285.669 78.7237
+Adding a shotgun shell 909 at pos  285.669 78.7237
+Adding a shotgun shell 910 at pos  285.669 78.7237
+Adding a shotgun shell 911 at pos  285.669 78.7237
+Adding a shotgun shell 912 at pos  285.669 78.7237
+Adding a rocket 914 at pos  259.432 340.008
+Adding a bolt 916 at pos  209.66 125.882
+Adding a shotgun shell 918 at pos  204.883 60.0512
+Adding a shotgun shell 919 at pos  204.883 60.0512
+Adding a shotgun shell 920 at pos  204.883 60.0512
+Adding a shotgun shell 921 at pos  204.883 60.0512
+Adding a shotgun shell 922 at pos  204.883 60.0512
+Adding a shotgun shell 923 at pos  204.883 60.0512
+Adding a shotgun shell 924 at pos  204.883 60.0512
+Adding a shotgun shell 925 at pos  204.883 60.0512
+Adding a shotgun shell 926 at pos  204.883 60.0512
+Adding a shotgun shell 927 at pos  204.883 60.0512
+Adding a rocket 929 at pos  298.032 340.001
 
 ------------------------------ Clearup -------------------------------
 deleting entity id: 401 of type bot(1)
@@ -522,22 +949,7 @@ deleting entity id: 402 of type bot(1)
 deleting raven bot (id = 402)
 deleting entity id: 403 of type bot(1)
 deleting raven bot (id = 403)
-deleting entity id: 428 of type bot(1)
-deleting raven bot (id = 428)
-deleting entity id: 762 of type bot(1)
-deleting raven bot (id = 762)
-deleting entity id: 782 of type bot(1)
-deleting raven bot (id = 782)
-deleting entity id: 973 of type bot(1)
-deleting raven bot (id = 973)
-deleting entity id: 976 of type bot(1)
-deleting raven bot (id = 976)
-deleting projectile id: 1003
-deleting projectile id: 1009
-deleting projectile id: 1011
-deleting projectile id: 1015
-deleting projectile id: 1019
-deleting projectile id: 1021
-deleting projectile id: 1023
-deleting projectile id: 1025
-deleting projectile id: 1027
+deleting entity id: 571 of type bot(1)
+deleting raven bot (id = 571)
+deleting projectile id: 914
+deleting projectile id: 929

@@ -168,6 +168,10 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
 
            g_pRaven->AddBots(1); break;
 
+         case VK_RIGHT:
+
+             g_pRaven->AddBots(1, true); break;
+
          case VK_DOWN:
 
            g_pRaven->RemoveBot(); break;
@@ -217,6 +221,12 @@ LRESULT CALLBACK WindowProc (HWND   hwnd,
 
           g_pRaven->AddBots(1);
           
+          break;
+
+      case IDM_GAME_ADDLEARNINGBOT:
+
+          g_pRaven->AddBots(1, true);
+
           break;
 
       case IDM_GAME_REMOVEBOT:

@@ -1,6 +1,7 @@
 #include "Raven_Game.h"
 #include "Raven_ObjectEnumerations.h"
 #include "misc/WindowUtils.h"
+#include "misc/Stream_Utility_Functions.h"
 #include "misc/Cgdi.h"
 #include "Raven_SteeringBehaviors.h"
 #include "lua/Raven_Scriptor.h"
@@ -26,6 +27,9 @@
 #include "goals/Goal_Think.h"
 #include "goals/Raven_Goal_Types.h"
 
+#include "Learning_Bot.h"
+#include <thread>
+
 
 
 //uncomment to write object creation/deletion to debug console
@@ -39,10 +43,14 @@ Raven_Game::Raven_Game():m_pSelectedBot(NULL),
                          m_bRemoveABot(false),
                          m_pMap(NULL),
                          m_pPathManager(NULL),
-                         m_pGraveMarkers(NULL)
+                         m_pGraveMarkers(NULL),
+                         m_isModelLearning(false)
 {
   //load in the default map
   LoadMap(script->GetString("StartMap"));
+
+  //new dataset for learning bots
+  m_DataSet = CData();
 }
 
 
@@ -171,7 +179,22 @@ void Raven_Game::Update()
     else if ( (*curBot)->isAlive())
     {
       (*curBot)->Update();
-    }  
+
+      //adding data for the learning bots if a human player is possessing a bot
+      if ((m_DataSet.GetInputSet().size() < 500) && ((*curBot)->isPossessed())) {
+
+          //ajouter une observation au jeu d'entrainement
+          AddData((*curBot)->GetDataObservations(), (*curBot)->GetDataTargets());
+          debug_con << "la taille du training set " << m_DataSet.GetInputSet().size() << "";
+      }
+      //if we got enough training data for the model, learning phase begins
+      //a thread is used for parallel computing
+      else if ((m_DataSet.GetInputSet().size() >= 500) && (!m_isModelLearning)) {
+          debug_con << "Model is learning..." << "";
+          std::thread t1(&Raven_Game::TrainModel, this);
+          t1.detach();
+      }
+    }
   } 
 
   //update the triggers
@@ -193,6 +216,43 @@ void Raven_Game::Update()
 
     m_bRemoveABot = false;
   }
+}
+
+//ajout à chaque update d'un bot des données sur son cmportement
+bool Raven_Game::AddData(vector<double>& data, vector<double>& targets)
+{
+    if (data.size() > 0 && targets.size() > 0) {
+
+        if (m_DataSet.GetInputNb() <= 0)
+            m_DataSet = CData(data.size(), targets.size());
+
+        if (data.size() == m_DataSet.GetInputNb() && targets.size() == m_DataSet.GetTargetsNb()) {
+
+            m_DataSet.AddData(data, targets);
+            return true;
+        }
+    }
+
+    return false;
+
+}
+
+void Raven_Game::TrainModel() {
+    m_isModelLearning = true;
+
+    debug_con << "Model is learning..." << "";
+
+    m_CNNModel = CNeuralNet(m_DataSet.GetInputNb(), m_DataSet.GetTargetsNb(), NUM_HIDDEN_NEURONS, LEARNING_RATE);
+    bool trained = m_CNNModel.Train(&m_DataSet);
+
+    if (trained) {
+        debug_con << "Model has finished learning!" << "";
+    }
+    else
+    {
+        debug_con << "There was an error during the model training." << "";
+    }
+
 }
 
 
@@ -244,28 +304,37 @@ bool Raven_Game::AttemptToAddBot(Raven_Bot* pBot)
 //
 //  Adds a bot and switches on the default steering behavior
 //-----------------------------------------------------------------------------
-void Raven_Game::AddBots(unsigned int NumBotsToAdd)
+void Raven_Game::AddBots(unsigned int NumBotsToAdd, bool isLearningBot)
 { 
-  while (NumBotsToAdd--)
-  {
-    //create a bot. (its position is irrelevant at this point because it will
-    //not be rendered until it is spawned)
-    Raven_Bot* rb = new Raven_Bot(this, Vector2D());
-
-    //switch the default steering behaviors on
-    rb->GetSteering()->WallAvoidanceOn();
-    rb->GetSteering()->SeparationOn();
-
-    m_Bots.push_back(rb);
-
-    //register the bot with the entity manager
-    EntityMgr->RegisterEntity(rb);
-
-    
+    while (NumBotsToAdd--)
+    {
+        //create a bot. (its position is irrelevant at this point because it will
+        //not be rendered until it is spawned)
+        Raven_Bot* rb;
+        if (isLearningBot)
+        {
+            rb = new Learning_Bot(this, Vector2D());
 #ifdef LOG_CREATIONAL_STUFF
-  //debug_con << "Adding bot with ID " << ttos(rb->ID()) << "";
+            debug_con << "Adding learning bot with ID " << ttos(rb->ID()) << "";
 #endif
-  }
+        }
+        else
+        {
+            rb = new Raven_Bot(this, Vector2D());
+#ifdef LOG_CREATIONAL_STUFF
+            debug_con << "Adding bot with ID " << ttos(rb->ID()) << "";
+#endif
+        }
+
+        //switch the default steering behaviors on
+        rb->GetSteering()->WallAvoidanceOn();
+        rb->GetSteering()->SeparationOn();
+
+        m_Bots.push_back(rb);
+
+        //register the bot with the entity manager
+        EntityMgr->RegisterEntity(rb);
+    }
 }
 
 //---------------------------- NotifyAllBotsOfRemoval -------------------------
@@ -501,6 +570,7 @@ void Raven_Game::ClickLeftMouseButton(POINTS p)
   {
     Raven_Bot* pBot = GetBotAtPosition(POINTStoVector(p));
     m_pSelectedBot->FireWeapon(POINTStoVector(p));
+    m_pSelectedBot->SetHasShot();
 
     if (pBot)
     {

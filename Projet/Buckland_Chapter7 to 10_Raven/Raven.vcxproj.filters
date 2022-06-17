@@ -268,6 +268,15 @@
     <ClCompile Include="..\Common\misc\WindowUtils.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="Learning_Bot.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="CData.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="CNeuralNet.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Raven_Bot.h">
@@ -605,6 +614,15 @@
     </ClInclude>
     <ClInclude Include="..\Common\misc\WindowUtils.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Learning_Bot.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="CData.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="CNeuralNet.h">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

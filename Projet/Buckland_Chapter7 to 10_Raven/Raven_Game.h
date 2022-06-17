@@ -26,6 +26,9 @@
 #include "Raven_Bot.h"
 #include "navigation/pathmanager.h"
 
+#include "CData.h"
+#include "CNeuralNet.h"
+
 
 class BaseGameEntity;
 class Raven_Projectile;
@@ -80,6 +83,13 @@ private:
   //must be notified so that they can remove any references to that bot from
   //their memory
   void NotifyAllBotsOfRemoval(Raven_Bot* pRemovedBot)const;
+
+  //neural net
+  CData m_DataSet;
+  CNeuralNet m_CNNModel;
+  bool AddData(vector<double>& data, vector<double>& targets);
+  void TrainModel();
+  bool m_isModelLearning;
   
 public:
   
@@ -93,7 +103,7 @@ public:
   //loads an environment from a file
   bool LoadMap(const std::string& FileName); 
 
-  void AddBots(unsigned int NumBotsToAdd);
+  void AddBots(unsigned int NumBotsToAdd, bool isLearningBot = false);
   void AddRocket(Raven_Bot* shooter, Vector2D target);
   void AddRailGunSlug(Raven_Bot* shooter, Vector2D target);
   void AddShotGunPellet(Raven_Bot* shooter, Vector2D target);
@@ -161,6 +171,8 @@ public:
   const std::list<Raven_Bot*>&             GetAllBots()const{return m_Bots;}
   PathManager<Raven_PathPlanner>* const    GetPathManager(){return m_pPathManager;}
   int                                      GetNumBots()const{return m_Bots.size();}
+
+  CNeuralNet const                         GetCNNModel() const { return m_CNNModel; }
 
   
   void  TagRaven_BotsWithinViewRange(BaseGameEntity* pRaven_Bot, double range)

@@ -46,7 +46,8 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
                  m_iScore(0),
                  m_Status(spawning),
                  m_bPossessed(false),
-                 m_dFieldOfView(DegsToRads(script->GetDouble("Bot_FOV")))
+                 m_dFieldOfView(DegsToRads(script->GetDouble("Bot_FOV"))),
+                 m_hasShot(false)
            
 {
   SetEntityType(type_bot);
@@ -83,6 +84,9 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
   m_pSensoryMem = new Raven_SensoryMemory(this, script->GetDouble("Bot_MemorySpan"));
 
   m_team = 0;
+
+  m_vecObservations = std::vector<double>();
+  m_vecTargets = std::vector<double>();
 }
 
 //-------------------------------- dtor ---------------------------------------
@@ -161,8 +165,39 @@ void Raven_Bot::Update()
 
     //this method aims the bot's current weapon at the current target
     //and takes a shot if a shot is 
-
     m_pWeaponSys->TakeAimAndShoot();
+  }
+  else
+  {
+      //examine all the opponents in the bots sensory memory and select one
+      //to be the current target
+      if (m_pTargetSelectionRegulator->isReady())
+      {
+          m_pTargSys->Update();
+      }
+
+      // don't compute data if there is no target
+      if (m_pTargSys->isTargetPresent())
+      {
+          m_vecObservations.clear();
+          m_vecTargets.clear();
+
+          m_vecObservations.push_back((Pos().Distance(m_pTargSys->GetTarget()->Pos())));
+          m_vecObservations.push_back(m_pTargSys->isTargetWithinFOV());
+          m_vecObservations.push_back(m_pWeaponSys->GetAmmoRemainingForWeapon(m_pWeaponSys->GetCurrentWeapon()->GetType()));
+          m_vecObservations.push_back(m_pWeaponSys->GetCurrentWeapon()->GetType());
+          m_vecObservations.push_back((Health()));
+          m_vecObservations.push_back(m_pTargSys->GetTarget()->Health());
+
+          if (!m_hasShot) {
+              m_vecTargets.push_back(0); //the player didn't shoot (negative observation)
+          }
+          else {
+              m_vecTargets.push_back(1); //the player shot (positive observation)
+          }
+
+          m_hasShot = false;
+      }
   }
 }
 

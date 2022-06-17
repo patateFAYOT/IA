@@ -36,11 +36,11 @@ class Raven_SensoryMemory;
 
 class Raven_Bot : public MovingEntity
 {
-private:
+protected:
 
   enum Status{alive, dead, spawning};
 
-private:
+protected:
 
   //alive, dead or spawning?
   Status                             m_Status;
@@ -129,6 +129,11 @@ private:
   //initializes the bot's VB with its geometry
   void          SetUpVertexBuffer();
 
+  //data for learning bots
+  std::vector<double> m_vecObservations;
+  std::vector<double> m_vecTargets;
+  bool m_hasShot;
+
 
 public:
   
@@ -169,6 +174,8 @@ public:
   void          SetDead(){m_Status = dead;}
   void          SetAlive(){m_Status = alive;}
   void			SetTeam(unsigned int id_team) { m_team = id_team; }
+  void			SetHasShot() { m_hasShot = true;  }
+
   //returns a value indicating the time in seconds it will take the bot
   //to reach the given position at its current speed.
   double        CalculateTimeToReachPosition(Vector2D pos)const; 
@@ -219,6 +226,9 @@ public:
   Raven_SensoryMemory* const         GetSensoryMem()const{return m_pSensoryMem;}
   unsigned int const				 GetTeam()const { return m_team; }
 
+  //data for learning bots
+  std::vector<double> GetDataObservations() { return m_vecObservations; }
+  std::vector<double> GetDataTargets() { return m_vecTargets; }
 
 };
 
