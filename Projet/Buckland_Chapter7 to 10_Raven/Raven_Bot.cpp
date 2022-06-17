@@ -46,6 +46,10 @@ Raven_Bot::Raven_Bot(Raven_Game* world,Vector2D pos):
                  m_iScore(0),
                  m_Status(spawning),
                  m_bPossessed(false),
+                 m_team(0),
+                 m_targeting(false),
+                 m_destination(Vector2D(0,0)),
+                 m_givenTarget(NULL),
                  m_dFieldOfView(DegsToRads(script->GetDouble("Bot_FOV")))
            
 {
@@ -164,6 +168,10 @@ void Raven_Bot::Update()
 
     m_pWeaponSys->TakeAimAndShoot();
   }
+
+  if (m_givenTarget != NULL && m_givenTarget->isDead()) {
+      m_targeting = false;
+  }
 }
 
 
@@ -231,10 +239,21 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
       {
           m_givenTarget = (Raven_Bot*) msg.ExtraInfo;
           m_destination = m_givenTarget->Pos();
-          m_pBrain->AddGoal_MoveToPosition(m_destination);
+
+          if (m_givenTarget->GetTeam() != m_team) {
+              m_targeting = true;
+          }
       }
 
     return true;
+
+  case Msg_TeammateDead:
+
+      //unsigned int weaponType = (unsigned int)msg.ExtraInfo;
+      //m_pBrain->AddGoal_MoveToPosition();
+
+    return true;
+
   case Msg_TakeThatMF:
 
     //just return if already dead or spawning

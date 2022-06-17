@@ -23,7 +23,7 @@ public:
 
 	double CalculateDesirability(Raven_Bot* pBot);
 
-	//void  SetGoal(Raven_Bot* pEnt);
+	void  SetGoal(Raven_Bot* pEnt);
 
 	void RenderInfo(Vector2D Position, Raven_Bot* pBot);
 };

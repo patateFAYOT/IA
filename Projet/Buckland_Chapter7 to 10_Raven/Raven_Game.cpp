@@ -17,6 +17,7 @@
 #include "Raven_Messages.h"
 #include "GraveMarkers.h"
 
+#include "armory/Raven_Weapon.h"
 #include "armory/Raven_Projectile.h"
 #include "armory/Projectile_Rocket.h"
 #include "armory/Projectile_Pellet.h"
@@ -25,8 +26,6 @@
 #include "Debug/DebugConsole.h"
 #include "goals/Goal_Think.h"
 #include "goals/Raven_Goal_Types.h"
-
-
 
 //uncomment to write object creation/deletion to debug console
 #define  LOG_CREATIONAL_STUFF
@@ -162,6 +161,39 @@ void Raven_Game::Update()
     {
       //create a grave
       m_pGraveMarkers->AddGrave((*curBot)->Pos());
+
+      for (int weapontype = 6; weapontype <= 9; weapontype++) {
+          Raven_Weapon* weapon = (*curBot)->GetWeaponSys()->GetWeaponFromInventory(weapontype);
+
+          if (weapon) {
+              
+              weapon->NumRoundsRemaining();
+          }
+      }
+      
+
+
+      std::list<Raven_Bot*>::iterator findBot = m_Bots.begin();
+      Raven_Bot* teammateBot = NULL;
+      double minDist = INFINITE;
+
+      for (findBot; findBot != m_Bots.end(); ++findBot) {
+          if (*findBot != *curBot && (*findBot)->GetTeam() == (*curBot)->GetTeam()) {
+
+              double dist = Vec2DDistanceSq((*curBot)->Pos(), (*findBot)->Pos());
+
+              if (dist < minDist) {
+                  teammateBot = *findBot;
+                  minDist = dist;
+              }
+          }
+      }
+
+      Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                              (*curBot)->ID(),
+                              teammateBot->ID(),
+                              Msg_TeammateDead,
+                              NO_ADDITIONAL_INFO);
 
       //change its status to spawning
       (*curBot)->SetSpawning();

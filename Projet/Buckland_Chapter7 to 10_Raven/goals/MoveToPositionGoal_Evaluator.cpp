@@ -6,6 +6,8 @@
 #include "misc/cgdi.h"
 #include "misc/Stream_Utility_Functions.h"
 #include "Raven_Feature.h"
+#include "../Raven_SensoryMemory.h"
+#include "Goal_AttackTarget.h"
 
 
 #include "debug/DebugConsole.h"
@@ -20,7 +22,7 @@ double MoveToPositionGoal_Evaluator::CalculateDesirability(Raven_Bot* pBot)
     double Desirability = 0.0;
 
     //only do the calculation if there is a target present
-    if (pBot->GetTeam() == 1 && pBot->GetTargetBot()->ID() != pBot->GetGivenTarget()->ID() && pBot->GetDestination() != pBot->Pos())
+    if (pBot->GetTargeting() && pBot->Pos() != pBot->GetDestination())
     {
         Desirability = 1.0;
     }
@@ -30,10 +32,23 @@ double MoveToPositionGoal_Evaluator::CalculateDesirability(Raven_Bot* pBot)
 
 //----------------------------- SetGoal ---------------------------------------
 //-----------------------------------------------------------------------------
-/*void MoveToPositionGoal_Evaluator::SetGoal(Raven_Bot* pBot)
+void MoveToPositionGoal_Evaluator::SetGoal(Raven_Bot* pBot)
 {
-    pBot->GetBrain()->AddGoal_MoveToPosition();
-}*/
+    std::list<Raven_Bot*> sensedBots = pBot->GetSensoryMem()->GetListOfRecentlySensedOpponents();
+
+    bool found = false;
+
+    for(Raven_Bot * bot : sensedBots) {
+        if (bot->ID() == pBot->GetGivenTarget()->ID()) {
+            found = true;
+
+            pBot->GetBrain()->AddSubgoal(new Goal_AttackTarget(pBot));
+            return;
+        }
+    }
+
+    pBot->GetBrain()->AddGoal_Explore();
+}
 
 //-------------------------- RenderInfo ---------------------------------------
 //-----------------------------------------------------------------------------

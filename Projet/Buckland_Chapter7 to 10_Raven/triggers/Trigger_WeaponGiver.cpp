@@ -65,8 +65,6 @@ void Trigger_WeaponGiver::Read(std::ifstream& in)
   SetRespawnDelay((unsigned int)(script->GetDouble("Weapon_RespawnDelay") * FrameRate));
 }
 
-
-
 void Trigger_WeaponGiver::Render()
 {
   if (isActive())

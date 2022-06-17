@@ -111,6 +111,7 @@ private:
 
   //Team du BOT : 0 = match sans équipe / 1 = team du joueur
   unsigned int						 m_team;
+  bool								 m_targeting;
   Vector2D							 m_destination;
   Raven_Bot*						 m_givenTarget;
 
@@ -224,6 +225,7 @@ public:
   unsigned int const				 GetTeam()const { return m_team; }
   Vector2D							 GetDestination()const { return m_destination; }
   Raven_Bot*						 GetGivenTarget()const { return m_givenTarget; }
+  bool								 GetTargeting() const { return m_targeting; }
 
 
 };
