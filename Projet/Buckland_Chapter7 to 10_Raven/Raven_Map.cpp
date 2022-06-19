@@ -231,6 +231,7 @@ bool Raven_Map::LoadMap(const std::string& filename)
 
  
   //now create the environment entities
+  bool isGrenadeSpawned = false;
   while (!in.eof())
   {   
     //get type of next map object
@@ -275,7 +276,16 @@ bool Raven_Map::LoadMap(const std::string& filename)
 
    case type_rocket_launcher:
      
-       AddWeapon_Giver(type_rocket_launcher, in); break;
+       if (!isGrenadeSpawned)
+       {
+           AddWeapon_Giver(type_hand_grenade, in);
+           isGrenadeSpawned = true;
+       }
+       else
+       {
+           AddWeapon_Giver(type_rocket_launcher, in);
+       }
+       break;
 
     default:
       
