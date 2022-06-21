@@ -1,4 +1,4 @@
-# TP1 d'Intelligence Artificielle pour le jeux vidéo #
+# Mini-Projet d'Intelligence Artificielle pour le jeux vidéo #
 
 Yoann Conti - CONY15049900
 Ilyes Bennaga - BENI26099904
