@@ -29,9 +29,6 @@ private:
   //the current target (this will be null if there is no target assigned)
   Raven_Bot*  m_pCurrentTarget;
 
-  bool		  m_pGotOrder;
-
-
 public:
 
   Raven_TargetingSystem(Raven_Bot* owner);
@@ -67,11 +64,9 @@ public:
   Raven_Bot* GetTarget()const{return m_pCurrentTarget;}
 
   //sets the target pointer to null
-  void       ClearTarget() { m_pCurrentTarget = 0; m_pGotOrder = false; }
+  void       ClearTarget() { m_pCurrentTarget = 0; }
 
-  void		SetTarget(Raven_Bot* bot) { m_pCurrentTarget = bot; m_pGotOrder = true; }
-
-  bool		HasOrder()const { return m_pGotOrder; }
+  void		SetTarget(Raven_Bot* bot) { m_pCurrentTarget = bot; }
 };
 
 

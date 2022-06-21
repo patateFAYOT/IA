@@ -18,6 +18,7 @@
 #include "Raven_Messages.h"
 #include "GraveMarkers.h"
 
+#include "armory/Raven_Weapon.h"
 #include "armory/Raven_Projectile.h"
 #include "armory/Projectile_Rocket.h"
 #include "armory/Projectile_Pellet.h"
@@ -170,7 +171,44 @@ void Raven_Game::Update()
     else if ((*curBot)->isDead())
     {
       //create a grave
-      m_pGraveMarkers->AddGrave((*curBot)->Pos());
+      //m_pGraveMarkers->AddGrave((*curBot)->Pos());
+        
+        bool hasSpawned = false;
+
+      for (int weapontype = type_rail_gun; weapontype <= type_shotgun; weapontype++) {
+          Raven_Weapon* weapon = (*curBot)->GetWeaponSys()->GetWeaponFromInventory(weapontype);
+
+          if (weapon) {
+              hasSpawned = true;
+              m_pMap->SpawnWeapon_Giver(weapontype, (*curBot)->GetPathPlanner()->GetClosestNodeToPosition((*curBot)->Pos()), (*curBot)->Pos());
+          }
+      }
+
+      if (hasSpawned && (*curBot)->GetTeam()) {
+          std::list<Raven_Bot*>::iterator findBot = m_Bots.begin();
+          Raven_Bot* teammateBot = NULL;
+          double minDist = INFINITE;
+
+          for (findBot; findBot != m_Bots.end(); ++findBot) {
+              if (!(*findBot)->isPossessed() && *findBot != *curBot && (*findBot)->GetTeam() == (*curBot)->GetTeam()) {
+
+                  double dist = Vec2DDistanceSq((*curBot)->Pos(), (*findBot)->Pos());
+
+                  if (dist < minDist) {
+                      teammateBot = *findBot;
+                      minDist = dist;
+                  }
+              }
+          }
+
+          if (teammateBot) {
+              Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                  (*curBot)->ID(),
+                  teammateBot->ID(),
+                  Msg_TeammateDead,
+                  (*curBot));
+          }
+      }
 
       //change its status to spawning
       (*curBot)->SetSpawning();
@@ -219,7 +257,7 @@ void Raven_Game::Update()
   }
 }
 
-//ajout à chaque update d'un bot des données sur son cmportement
+//ajout ï¿½ chaque update d'un bot des donnï¿½es sur son cmportement
 bool Raven_Game::AddData(vector<double>& data, vector<double>& targets)
 {
     if (data.size() > 0 && targets.size() > 0) {

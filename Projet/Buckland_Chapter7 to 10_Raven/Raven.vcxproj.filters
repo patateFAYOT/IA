@@ -285,6 +285,8 @@
     </ClCompile>
     <ClCompile Include="armory\Projectile_Grenade.cpp">
       <Filter>Game\weapons &amp; projectiles\projectiles</Filter>
+    <ClCompile Include="goals\MoveToPositionGoal_Evaluator.cpp">
+      <Filter>AI\goals\goal evaluation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -626,7 +628,6 @@
     </ClInclude>
     <ClInclude Include="Learning_Bot.h">
       <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="CData.h">
       <Filter>Game</Filter>
     </ClInclude>
@@ -641,9 +642,10 @@
     </ClInclude>
     <ClInclude Include="armory\Projectile_Grenade.h">
       <Filter>Game\weapons &amp; projectiles\projectiles</Filter>
+    <ClInclude Include="goals\MoveToPositionGoal_Evaluator.h">
+      <Filter>AI\goals\goal evaluation</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
     <None Include="Params.lua">
       <Filter>Game\Script related</Filter>
     </None>

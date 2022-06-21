@@ -51,7 +51,7 @@ public:
   //this is called each game-tick to update the trigger's internal state
   virtual void Update()
   {
-    if ( (--m_iNumUpdatesRemainingUntilRespawn <= 0) && !isActive())
+    if (m_iNumUpdatesRemainingUntilRespawn != INFINITE && (--m_iNumUpdatesRemainingUntilRespawn <= 0) && !isActive())
     {
       SetActive();
     }

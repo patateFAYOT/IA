@@ -224,6 +224,7 @@
     <ClCompile Include="CNeuralNet.cpp" />
     <ClCompile Include="goals\Goal_Flee.cpp" />
     <ClCompile Include="Learning_Bot.cpp" />
+    <ClCompile Include="goals\MoveToPositionGoal_Evaluator.cpp" />
     <ClCompile Include="main.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -547,6 +548,7 @@
     <ClInclude Include="CNeuralNet.h" />
     <ClInclude Include="goals\Goal_Flee.h" />
     <ClInclude Include="Learning_Bot.h" />
+    <ClInclude Include="goals\MoveToPositionGoal_Evaluator.h" />
     <ClInclude Include="Raven_Bot.h" />
     <ClInclude Include="Raven_Game.h" />
     <ClInclude Include="Raven_Map.h" />
