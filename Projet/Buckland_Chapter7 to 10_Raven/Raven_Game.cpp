@@ -160,40 +160,44 @@ void Raven_Game::Update()
     else if ((*curBot)->isDead())
     {
       //create a grave
-      m_pGraveMarkers->AddGrave((*curBot)->Pos());
+      //m_pGraveMarkers->AddGrave((*curBot)->Pos());
+        
+        bool hasSpawned = false;
 
-      for (int weapontype = 6; weapontype <= 9; weapontype++) {
+      for (int weapontype = type_rail_gun; weapontype <= type_shotgun; weapontype++) {
           Raven_Weapon* weapon = (*curBot)->GetWeaponSys()->GetWeaponFromInventory(weapontype);
 
           if (weapon) {
-              
-              weapon->NumRoundsRemaining();
+              hasSpawned = true;
+              m_pMap->SpawnWeapon_Giver(weapontype, (*curBot)->GetPathPlanner()->GetClosestNodeToPosition((*curBot)->Pos()), (*curBot)->Pos());
           }
       }
-      
 
+      if (hasSpawned && (*curBot)->GetTeam()) {
+          std::list<Raven_Bot*>::iterator findBot = m_Bots.begin();
+          Raven_Bot* teammateBot = NULL;
+          double minDist = INFINITE;
 
-      std::list<Raven_Bot*>::iterator findBot = m_Bots.begin();
-      Raven_Bot* teammateBot = NULL;
-      double minDist = INFINITE;
+          for (findBot; findBot != m_Bots.end(); ++findBot) {
+              if (!(*findBot)->isPossessed() && *findBot != *curBot && (*findBot)->GetTeam() == (*curBot)->GetTeam()) {
 
-      for (findBot; findBot != m_Bots.end(); ++findBot) {
-          if (*findBot != *curBot && (*findBot)->GetTeam() == (*curBot)->GetTeam()) {
+                  double dist = Vec2DDistanceSq((*curBot)->Pos(), (*findBot)->Pos());
 
-              double dist = Vec2DDistanceSq((*curBot)->Pos(), (*findBot)->Pos());
-
-              if (dist < minDist) {
-                  teammateBot = *findBot;
-                  minDist = dist;
+                  if (dist < minDist) {
+                      teammateBot = *findBot;
+                      minDist = dist;
+                  }
               }
           }
-      }
 
-      Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
-                              (*curBot)->ID(),
-                              teammateBot->ID(),
-                              Msg_TeammateDead,
-                              NO_ADDITIONAL_INFO);
+          if (teammateBot) {
+              Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
+                  (*curBot)->ID(),
+                  teammateBot->ID(),
+                  Msg_TeammateDead,
+                  (*curBot));
+          }
+      }
 
       //change its status to spawning
       (*curBot)->SetSpawning();

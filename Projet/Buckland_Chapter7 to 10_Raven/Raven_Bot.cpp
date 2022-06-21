@@ -249,8 +249,7 @@ bool Raven_Bot::HandleMessage(const Telegram& msg)
 
   case Msg_TeammateDead:
 
-      //unsigned int weaponType = (unsigned int)msg.ExtraInfo;
-      //m_pBrain->AddGoal_MoveToPosition();
+    m_pBrain->AddGoal_MoveToPosition(((Raven_Bot*)msg.ExtraInfo)->Pos());
 
     return true;
 
