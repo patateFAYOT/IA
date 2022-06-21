@@ -109,8 +109,11 @@ protected:
   //set to true when a human player takes over control of the bot
   bool                               m_bPossessed;
 
-  //Team du BOT : 0 = match sans équipe / 1 = team du joueur
+  //Team du BOT : 0 = match sans ï¿½quipe / 1 = team du joueur
   unsigned int						 m_team;
+  bool								 m_targeting;
+  Vector2D							 m_destination;
+  Raven_Bot*						 m_givenTarget;
 
   //a vertex buffer containing the bot's geometry
   std::vector<Vector2D>              m_vecBotVB;
@@ -176,6 +179,8 @@ public:
   void			SetTeam(unsigned int id_team) { m_team = id_team; }
   void			SetHasShot() { m_hasShot = true;  }
 
+  void			SetDestination(Vector2D pos) { m_destination = pos; }
+  void			SetGivenTarget(Raven_Bot* target) { m_givenTarget = target; }
   //returns a value indicating the time in seconds it will take the bot
   //to reach the given position at its current speed.
   double        CalculateTimeToReachPosition(Vector2D pos)const; 
@@ -225,6 +230,9 @@ public:
   Raven_WeaponSystem* const          GetWeaponSys()const{return m_pWeaponSys;}
   Raven_SensoryMemory* const         GetSensoryMem()const{return m_pSensoryMem;}
   unsigned int const				 GetTeam()const { return m_team; }
+  Vector2D							 GetDestination()const { return m_destination; }
+  Raven_Bot*						 GetGivenTarget()const { return m_givenTarget; }
+  bool								 GetTargeting() const { return m_targeting; }
 
   //data for learning bots
   std::vector<double> GetDataObservations() { return m_vecObservations; }

@@ -39,6 +39,10 @@ public:
   void Render();
 
   void Read (std::ifstream& is);
+
+  Trigger_WeaponGiver(int id, Vector2D pos);
+
+  void Read(int id, Vector2D pos);
 };
 
 

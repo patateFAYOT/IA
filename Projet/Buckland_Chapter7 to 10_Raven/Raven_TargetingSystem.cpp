@@ -17,21 +17,24 @@ Raven_TargetingSystem::Raven_TargetingSystem(Raven_Bot* owner):m_pOwner(owner),
 //-----------------------------------------------------------------------------
 void Raven_TargetingSystem::Update()
 {
-    if (!HasOrder())
+    double ClosestDistSoFar = MaxDouble;
+    m_pCurrentTarget = 0;
+
+    //grab a list of all the opponents the owner can sense
+    std::list<Raven_Bot*> SensedBots;
+    SensedBots = m_pOwner->GetSensoryMem()->GetListOfRecentlySensedOpponents();
+
+    std::list<Raven_Bot*>::const_iterator curBot = SensedBots.begin();
+    for (curBot; curBot != SensedBots.end(); ++curBot)
     {
-        double ClosestDistSoFar = MaxDouble;
-        m_pCurrentTarget = 0;
-
-        //grab a list of all the opponents the owner can sense
-        std::list<Raven_Bot*> SensedBots;
-        SensedBots = m_pOwner->GetSensoryMem()->GetListOfRecentlySensedOpponents();
-
-        std::list<Raven_Bot*>::const_iterator curBot = SensedBots.begin();
-        for (curBot; curBot != SensedBots.end(); ++curBot)
+        //make sure the bot is alive and that it is not the owner
+        if ((*curBot)->isAlive() && (*curBot != m_pOwner))
         {
-            //make sure the bot is alive and that it is not the owner
-            if ((*curBot)->isAlive() && (*curBot != m_pOwner))
-            {
+            if (*curBot == m_pOwner->GetGivenTarget()) {
+                m_pCurrentTarget = *curBot;
+                ClosestDistSoFar = -1;
+            }
+            else {
                 double dist = Vec2DDistanceSq((*curBot)->Pos(), m_pOwner->Pos());
 
                 if (dist < ClosestDistSoFar && (!(*curBot)->GetTeam() || m_pOwner->GetTeam() != (*curBot)->GetTeam()))
@@ -41,8 +44,8 @@ void Raven_TargetingSystem::Update()
                 }
             }
         }
-        return;
     }
+    return;
 }
 
 
